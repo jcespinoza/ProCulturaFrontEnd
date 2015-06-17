@@ -1,0 +1,23 @@
+{
+  "name": "ProCultura",
+  "version": "0.0.1",
+  "description": "\"Web application for registering cultural events\"",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jcespinoza/ProCulturaFrontEnd.git"
+  },
+  "author": "Analisis y Diseño Class Unitec SPS 2015",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jcespinoza/ProCulturaFrontEnd/issues"
+  },
+  "homepage": "https://github.com/jcespinoza/ProCulturaFrontEnd",
+  "devDependencies": {
+    "angular": "^1.4.1",
+    "bower": "^1.4.1"
+  }
+}

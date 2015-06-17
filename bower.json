@@ -1,0 +1,24 @@
+{
+  "name": "ProCulturaWebClient",
+  "version": "0.0.1",
+  "homepage": "https://github.com/jcespinoza/ProCulturaFrontEnd",
+  "authors": [
+    "\"Analisis y Diseño class Unitec SPS 2015\""
+  ],
+  "description": "Web application for registering cultural events",
+  "main": "server.js",
+  "moduleType": [
+    "node"
+  ],
+  "keywords": [
+    "culture"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
