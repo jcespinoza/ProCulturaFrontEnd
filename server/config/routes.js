@@ -5,7 +5,7 @@
 
 module.exports = function(app){
     app.get('/partials/*', function(request, response){
-        response.render('../../public/app/'+ params[0] +'/view/' + params[1]);
+        response.render('../../public/app/' + request.params[0]);
     });
 
     app.get('/api/*', function(request, response){
