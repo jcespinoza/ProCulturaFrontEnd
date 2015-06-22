@@ -1,7 +1,23 @@
 //
    Created by jcespinoza on 6/21/15.
 
-html5
-   head
-   body
-       h1 Hello there! This is the index page!
+extends ../includes/layout
+
+block main-content
+    .navbar.navbar-inverse.navbar-fixed-top
+        .container
+            .navbar-header
+                a.navbar-brand(href="/") ProCultura
+                    h5 Cultural events near you
+            .navbar-collapse.collapse
+                ul.nav.navbar-nav
+                    li
+                        a(href="/") Home
+                    li
+                        a(href="/") Events
+                //div(ng-include="'/partials/account/view/login'")
+    section.content
+        div(ng-view)
+
+    footer.container.text-center
+        p &copy; 2015 ProCultura
