@@ -80,6 +80,7 @@ node_modules
 
 #Project configuration
 public/vendor
+public/css/*.css
 public/app/*/view/*.html
 server/views/*.html
 server/includes/*.html
