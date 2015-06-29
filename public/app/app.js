@@ -7,11 +7,12 @@ angular.module('app').config(function($routeProvider, $locationProvider){
 
     $locationProvider.html5Mode({
         enabled: true,
-        requireBase: false
+        requireBase: true
     });
 
     $routeProvider
         .when('/', {templateUrl: 'partials/main/view/main', controller: 'mainController'})
+        .when('/login',  {templateUrl: 'partials/account/view/login', controller: 'loginController'})
         .when('/signup', {templateUrl: 'partials/account/view/signup', controller: 'signupController'})
 });
 
