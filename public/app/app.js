@@ -10,8 +10,8 @@ angular.module('app', ['ngRoute', 'ngResource']).config(function($routeProvider,
 
     $routeProvider
         .when('/', {templateUrl: 'partials/main/view/main', controller: 'mainController'})
-        .when('/login',  {templateUrl: 'partials/account/view/login', controller: 'loginController'})
-        .when('/signup', {templateUrl: 'partials/account/view/signup', controller: 'signupController'})
+        .when('/login',  {templateUrl: 'partials/account/view/login', controller: 'LoginController'})
+        .when('/signup', {templateUrl: 'partials/account/view/signup', controller: 'SignUpController'})
 }).run(function($rootScope, $location){
     $rootScope.$on('$routeChangeError', function(event, current, previous, rejection){
         if(rejection === 'not authorized'){
