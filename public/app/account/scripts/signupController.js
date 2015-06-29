@@ -6,11 +6,6 @@
  */
 'use strict';
 angular.module('app').controller('SignUpController', function($scope, $http){
-    	
-
-    $scope.errorMesage;
-    $scope.passwordMatchError;
-    $scope.password;
 	$scope.user = {
 		name:"",
 		userName:"",
@@ -19,7 +14,7 @@ angular.module('app').controller('SignUpController', function($scope, $http){
 
 	};
 
-    $scope.existentsUsers = {
+    $scope.existentsUsers = [
         {   name:"testName",
             userName:"test",
             email:"test@test.com",
@@ -31,12 +26,12 @@ angular.module('app').controller('SignUpController', function($scope, $http){
             email:"ttt@t.com",
             password:"33422"
         }
-    };
+    ];
     $scope.confirmPassword = function() {
     	// body...
-    	if(user.password === password){
+    	if($scope.user.password === $scope.password2){
+            $scope.passwordMatchError = "";
             return true;
-             $scope.passwordMatchError = "";
         }
          $scope.passwordMatchError = "Password doesn't match";
     	return false;
@@ -45,9 +40,9 @@ angular.module('app').controller('SignUpController', function($scope, $http){
 
 
     $scope.checkUserName = function(){
-       for(i =0 ;i<$scope.existentsUsers.length;i++){
-            var obj = existentsUsers[i];
-            if($scope.user.userName === $obj.userName)
+       for(var i = 0; i < $scope.existentsUsers.length; i++){
+            var obj = $scope.existentsUsers[i];
+            if($scope.user.userName === obj.userName)
                 return true;
        }
 
@@ -55,28 +50,20 @@ angular.module('app').controller('SignUpController', function($scope, $http){
     };
 
     $scope.checkEmail = function(){
-      for(i =0 ;i<$scope.existentsUsers.length;i++){
-            var obj = existentsUsers[i];
-            if($scope.user.email === $obj.email)
+      for(var i = 0; i < $scope.existentsUsers.length; i++){
+            var obj = $scope.existentsUsers[i];
+            if($scope.user.email === obj.email)
                 return true;
        }
-
        return false;
     };
 
-
     $scope.creaeteUser = function(user){
 
-        $http.post('/api/login', userModel);
+        $http.post('/api/signup', user);
     };
-
-
-
-
 
     $scope.login = function(userModel){
         $http.post('/api/login', userModel)
     };
-
-
 });
