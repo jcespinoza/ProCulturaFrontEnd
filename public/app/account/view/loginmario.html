@@ -1,14 +1,14 @@
 <div id="login-page">
     <div class="container">
-        <form class="form-login">
+        <form class="form-login" ng-submit="signIn(user)">
 
             <h2 class="form-login-heading" style="color: black">
                 <i class="fa fa-calendar fa-2x" style ="color: white"></i>  ingrese a <strong style="color: red">ProCultura</strong>
             </h2>
             <div class="login-wrap">
-                <input class="form-control" type="text" name="login" placeholder="Usuario o correo electronico">
+                <input class="form-control" type="email" name="login" ng-model="user.username" placeholder="Correo electronico">
                 <br>
-                <input class="form-control" type="password" placeholder="Contraseña" class="showpassword">
+                <input class="form-control" type="password" ng-model="user.password" placeholder="Contraseña" class="showpassword">
 
                 <label class="checkbox">
                     <span class="pull-right">
@@ -25,7 +25,7 @@
                 </div>
                 <div class="registration">
                     ¿No posee una cuenta?<br />
-                    <a class="" href="#">
+                    <a class="" href="/signup">
                         Registrarse
                     </a>
                 </div>

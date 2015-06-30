@@ -58,7 +58,7 @@ angular.module('app').controller('SignUpController', function($scope, $http){
        return false;
     };
 
-    $scope.creaeteUser = function(user){
+    $scope.createUser = function(user){
 
         $http.post('/api/signup', user);
     };
