@@ -1,4 +1,40 @@
-//
-   Created by jcespinoza on 6/21/15.
-
-include signupmario.html
+html
+   body
+      div
+         .container
+            form.form-login(ng-submit="createUser(user)")
+               h2.form-login-heading(style='color: black')
+                  i.fa.fa-pencil-square-o.fa-2x(style='color: white')
+                  |   registrate a
+                  strong(style='color: red') ProCultura
+               .login-wrap
+                  .input-group
+                     strong#basic-addon1.input-group-addon
+                        i.fa.fa-user(style='color: black')
+                     input.form-control(type='text', placeholder='Usuario', aria-describedby='basic-addon1')
+                  br
+                  .input-group
+                     strong#basic-addon1.input-group-addon
+                        i.fa.fa-font(style='color: black')
+                     input.form-control(type='text', placeholder='Nombre Completo', aria-describedby='basic-addon1')
+                  br
+                  .input-group
+                     strong#basic-addon1.input-group-addon
+                        i.fa.fa-at(style='color: black')
+                     input.form-control(type='text', placeholder='Email', aria-describedby='basic-addon1')
+                  hr
+                  .input-group
+                     strong#basic-addon1.input-group-addon
+                        i.fa.fa-lock(style='color: black')
+                     input.form-control(type='text', placeholder='Contraseña', aria-describedby='basic-addon1')
+                  br
+                  .input-group
+                     strong#basic-addon1.input-group-addon
+                        i.fa.fa-key(style='color: black')
+                     input.form-control(type='text', placeholder='Confirmar Contraseña', aria-describedby='basic-addon1')
+                  hr
+                  button.btn.btn-warning.btn-block(type='submit')
+                     i.fa.fa-unlock
+                     |  REGISTRAR
+            // END FORM
+   
