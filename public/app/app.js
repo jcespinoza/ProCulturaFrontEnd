@@ -1,7 +1,7 @@
 /**
  * Created by jcespinoza on 6/21/15.
  */
-angular.module('app', ['ngRoute', 'ngResource']).config(function($routeProvider, $locationProvider){
+angular.module('app', ['ngRoute', 'ngResource','ngCookies']).config(function($routeProvider, $locationProvider){
 
     $locationProvider.html5Mode({
         enabled: true,
