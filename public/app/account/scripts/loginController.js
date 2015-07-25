@@ -2,7 +2,7 @@
  * Created by jcespinoza on 6/21/15.
  */
 'use strict';
-angular.module('app').controller('LoginController', function($scope, $http){
+angular.module('app').controller('LoginController', function($cookies,$scope, $http){
     $scope.user = {};
     var serverRoute = 'http://localhost:11705';
 
@@ -18,6 +18,7 @@ angular.module('app').controller('LoginController', function($scope, $http){
                 console.log(status);
                 console.log(headers);
                 console.log(config);
+             $cookies.put('Token',data);
             }).
             error(function(data, status, headers, config) {
                 console.log('ERROR!');
