@@ -7,6 +7,7 @@
 'use strict';
 angular.module('app').controller('SignUpController', function($scope, $http, $location){
 
+    $scope.showErrorMessage = false;
     var serverRoute = 'http://localhost:11705';
 	$scope.user = {
 		name:"",
@@ -50,25 +51,22 @@ angular.module('app').controller('SignUpController', function($scope, $http, $lo
 
     $scope.createUser = function(user){
         console.log(user);
-        $http.post(serverRoute + '/api/User', user);
+        $http.post(serverRoute + '/api/User', user).
+            success(function(data, status, headers, config) {
+                console.log('SUCCESS!');
+                console.log(data);
+                console.log(status);
+                console.log(headers);
+                console.log(config);
+                $location.path('/login');
+            }). error(function(data, status, headers, config) {
+                console.log('ERROR!');
+                console.log(data);
+                console.log(status);
+                console.log(headers);
+                console.log(config);
+                $scope.showErrorMessage = true;
+            });
     };
 
-    $scope.login = function(userModel){
-        $http.post('/api/login', userModel).
-        success(function(data, status, headers, config) {
-
-            $location.path('/login');
-            console.log('SUCCESS!');
-            console.log(data);
-            console.log(status);
-            console.log(headers);
-            console.log(config);
-        }). error(function(data, status, headers, config) {
-            console.log('ERROR!');
-            console.log(data);
-            console.log(status);
-            console.log(headers);
-            console.log(config);
-        });
-    };
 });

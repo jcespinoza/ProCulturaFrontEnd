@@ -5,7 +5,7 @@
 angular.module('app').controller('LoginController', function($cookies,$scope, $http){
     $scope.user = {};
     var serverRoute = 'http://localhost:11705';
-
+    $scope.showErrorMessage = false;
     $scope.checkPasswordLengthIsAcceptable = function(password){
         return password !== undefined && password.length > 8;
     };
@@ -26,6 +26,7 @@ angular.module('app').controller('LoginController', function($cookies,$scope, $h
                 console.log(status);
                 console.log(headers);
                 console.log(config);
+                $scope.showErrorMessage = true;
             });
     };
 });
