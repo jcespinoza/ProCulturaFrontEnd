@@ -18,7 +18,7 @@ angular.module('app').controller('LoginController', function($cookies,$scope, $h
                 console.log(status);
                 console.log(headers);
                 console.log(config);
-             $cookies.put('Token',status);
+             $cookies.put('Token',data.AccessToken);
             }).
             error(function(data, status, headers, config) {
                 console.log('ERROR!');
