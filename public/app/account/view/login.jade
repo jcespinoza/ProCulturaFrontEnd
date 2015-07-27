@@ -2,7 +2,19 @@ html
    body
       #login-page
          .container
-            form.form-login(ng-submit='signIn(user)')
+
+            // Modal Dialog
+            .modal.fade(data-backdrop='static', data-keyboard='false', tabindex='-1', role='dialog', aria-hidden='true', style='padding-top:30%; overflow-y:visible;')
+            .modal-dialog.modal-m(ng-show='isProcessing')
+              .modal-content
+                .modal-header
+                  h3(style='margin:0;')
+                .modal-body
+                  .progress.progress-striped.active(style='margin-bottom:0;')
+                    .progress-bar(style='width: 100%')
+            // End Modal dialog
+
+            form.form-login(ng-submit='signIn(user)', ng-disabled='isProcessing' )
                h2.form-login-heading(style='color: black')
                   i.fa.fa-calendar.fa-2x(style='color: white')
                   |   ingrese a
@@ -17,7 +29,13 @@ html
                   button.btn.btn-warning.btn-block(type='submit')
                      i.fa.fa-unlock
                      |  ENTRAR
+                  br
+
+                  p(style="text-align: center; color: red", ng-show="showErrorMessage")
+                     | Correo electronico o Contraseña incorrecta
+
                   hr
+
                   .login-social-link.centered
                      p o ingresar mediante una red social
                      button.btn.btn-google
@@ -31,5 +49,3 @@ html
                      br
                      a(href='/signup')
                         | Registrarse
-            // END FORM
-    
