@@ -1,51 +1,49 @@
-html
-   body
-      #login-page
-         .container
+#login-page
+   .container
 
-            // Modal Dialog
-            .modal.fade(data-backdrop='static', data-keyboard='false', tabindex='-1', role='dialog', aria-hidden='true', style='padding-top:30%; overflow-y:visible;')
-            .modal-dialog.modal-m(ng-show='isProcessing')
-              .modal-content
-                .modal-header
-                  h3(style='margin:0;')
-                .modal-body
-                  .progress.progress-striped.active(style='margin-bottom:0;')
-                    .progress-bar(style='width: 100%')
-            // End Modal dialog
+      // Modal Dialog
+      .modal.fade(data-backdrop='static', data-keyboard='false', tabindex='-1', role='dialog', aria-hidden='true', style='padding-top:30%; overflow-y:visible;')
+      .modal-dialog.modal-m(ng-show='isProcessing')
+        .modal-content
+          .modal-header
+            h3(style='margin:0;')
+          .modal-body
+            .progress.progress-striped.active(style='margin-bottom:0;')
+              .progress-bar(style='width: 100%')
+      // End Modal dialog
 
-            form.form-login(ng-submit='signIn(user)', ng-disabled='isProcessing' )
-               h2.form-login-heading(style='color: black')
-                  i.fa.fa-calendar.fa-2x(style='color: white')
-                  |   ingrese a
-                  strong(style='color: red') ProCultura
-               .login-wrap
-                  input.form-control(type='email', name='login', ng-model='user.Email', placeholder='Correo electronico')
-                  br
-                  input.form-control(type='password', ng-model='user.Password', placeholder='Contraseña')
-                  label.checkbox
-                     span.pull-right
-                        a(data-toggle='modal', href='')  ¿Olvido Contraseña?
-                  button.btn.btn-warning.btn-block(type='submit')
-                     i.fa.fa-unlock
-                     |  ENTRAR
-                  br
+      form.form-login(ng-submit='signIn(user)', ng-disabled='isProcessing' )
+         h2.form-login-heading(style='color: black')
+            i.fa.fa-calendar.fa-2x(style='color: white')
+            |   ingrese a
+            strong(style='color: red') ProCultura
+         .login-wrap
+            input.form-control(type='email', name='login', ng-model='user.Email', placeholder='Correo electronico')
+            br
+            input.form-control(type='password', ng-model='user.Password', placeholder='Contraseña')
+            label.checkbox
+               span.pull-right
+                  a(data-toggle='modal', href='')  ¿Olvido Contraseña?
+            button.btn.btn-warning.btn-block(type='submit')
+               i.fa.fa-unlock
+               |  ENTRAR
+            br
 
-                  p(style="text-align: center; color: red", ng-show="showErrorMessage")
-                     | Correo electronico o Contraseña incorrecta
+            p(style="text-align: center; color: red", ng-show="showErrorMessage")
+               | Correo electronico o Contraseña incorrecta
 
-                  hr
+            hr
 
-                  .login-social-link.centered
-                     p o ingresar mediante una red social
-                     button.btn.btn-google
-                        i.fa.fa-google-plus-square
-                        |  Google+
-                     button.btn.btn-linkedin
-                        i.fa.fa-linkedin-square
-                        |  LinkedIn
-                  .registration
-                     | ¿No posee una cuenta?
-                     br
-                     a(href='/signup')
-                        | Registrarse
+            .login-social-link.centered
+               p o ingresar mediante una red social
+               button.btn.btn-google
+                  i.fa.fa-google-plus-square
+                  |  Google+
+               button.btn.btn-linkedin
+                  i.fa.fa-linkedin-square
+                  |  LinkedIn
+            .registration
+               | ¿No posee una cuenta?
+               br
+               a(href='/signup')
+                  | Registrarse
