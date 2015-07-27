@@ -21,6 +21,6 @@ angular.module('app', ['ngRoute', 'ngResource','ngCookies']).config(function($ro
     });
 }).run(function($rootScope, $location){
     $rootScope.$on('$routeChangeStart', function(event, next, current){
-        console.log(next.templateUrl);
+        //console.log(next.templateUrl);
     });
 });
