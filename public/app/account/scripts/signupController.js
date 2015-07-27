@@ -6,25 +6,22 @@
  */
 'use strict';
 angular.module('app').controller('SignUpController', function($scope, $http, $location){
-
+    $scope.isProcessing = false;
     $scope.showErrorMessage = false;
     var serverRoute = 'http://localhost:11705';
 	$scope.user = {
 		name:"",
 		userName:"",
 		email:"",
-		password:"",
-        ConfirmPassword:""
+		password: "",
+        confirmPassword: ""
 
 	};
 
     $scope.confirmPassword = function() {
-    	// body...
-    	if($scope.user.password === $scope.password2){
-            $scope.passwordMatchError = "";
+    	if($scope.user.password === $scope.user.confirmPassword){
             return true;
         }
-         $scope.passwordMatchError = "Password doesn't match";
     	return false;
     };
 
@@ -50,21 +47,13 @@ angular.module('app').controller('SignUpController', function($scope, $http, $lo
     };
 
     $scope.createUser = function(user){
-        console.log(user);
-        $http.post(serverRoute + '/api/User', user).
-            success(function(data, status, headers, config) {
-                console.log('SUCCESS!');
-                console.log(data);
-                console.log(status);
-                console.log(headers);
-                console.log(config);
+        $scope.isProcessing = true;
+        $http.post(serverRoute + '/api/User', user)
+            .success(function(data, status, headers, config) {
+                $scope.isProcessing = false;
                 $location.path('/login');
-            }). error(function(data, status, headers, config) {
-                console.log('ERROR!');
-                console.log(data);
-                console.log(status);
-                console.log(headers);
-                console.log(config);
+            }).error(function(data, status, headers, config) {
+                $scope.isProcessing = false;
                 $scope.showErrorMessage = true;
             });
     };
