@@ -1,9 +1,7 @@
 /**
  * Created by jcespinoza on 6/21/15.
  */
-/**
- * Created by jcespinoza on 6/21/15.
- */
+
 'use strict';
 angular.module('app').controller('SignUpController', function($scope, $http, $location){
     $scope.isProcessing = false;
@@ -23,27 +21,6 @@ angular.module('app').controller('SignUpController', function($scope, $http, $lo
             return true;
         }
     	return false;
-    };
-
-
-
-    $scope.checkUserName = function(){
-       for(var i = 0; i < $scope.existentsUsers.length; i++){
-            var obj = $scope.existentsUsers[i];
-            if($scope.user.userName === obj.userName)
-                return true;
-       }
-
-       return false;
-    };
-
-    $scope.checkEmail = function(){
-      for(var i = 0; i < $scope.existentsUsers.length; i++){
-            var obj = $scope.existentsUsers[i];
-            if($scope.user.email === obj.email)
-                return true;
-       }
-       return false;
     };
 
     $scope.createUser = function(user){
