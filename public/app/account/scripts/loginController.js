@@ -7,6 +7,7 @@ angular.module('app').controller('LoginController', function($cookies,$scope, $h
     var serverRoute = 'http://localhost:11705';
     $scope.showErrorMessage = false;
     $scope.isProcessing = false;
+
     $scope.checkPasswordLengthIsAcceptable = function(password){
         return password !== undefined && password.length > 8;
     };
