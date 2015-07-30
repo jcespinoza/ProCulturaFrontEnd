@@ -26,4 +26,4 @@ angular.module('app').controller('LoginController', ['HostFactory', function($co
                 $scope.showErrorMessage = true;
             });
     };
-});
+}]);
