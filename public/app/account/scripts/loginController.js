@@ -7,6 +7,7 @@ angular.module('app').controller('LoginController', ['HostFactory', '$scope', fu
   //console.log(HostFactory.serverName);
     $scope.showErrorMessage = false;
     $scope.isProcessing = false;
+
     $scope.checkPasswordLengthIsAcceptable = function(password){
         return password !== undefined && password.length > 8;
     };

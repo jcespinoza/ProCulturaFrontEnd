@@ -8,7 +8,7 @@
 angular.module('app').controller('SignUpController', function($scope, $http, $location){
     $scope.isProcessing = false;
     $scope.showErrorMessage = false;
-    var serverRoute = 'http://localhost:11705';
+    var serverRoute = 'http://localhost:11705'; //replace this
 	$scope.user = {
 		name:"",
 		userName:"",
@@ -25,7 +25,7 @@ angular.module('app').controller('SignUpController', function($scope, $http, $lo
     	return false;
     };
 
-
+//borrar estoplease
 
     $scope.checkUserName = function(){
        for(var i = 0; i < $scope.existentsUsers.length; i++){
