@@ -5,10 +5,10 @@
  * Created by jcespinoza on 6/21/15.
  */
 //'use strict';
-angular.module('app').controller('SignUpController', function($scope, $http, $location){
+angular.module('app').controller('SignUpController', ['$scope', '$http', '$location', 'HostFactory', function($scope, $http, $location, HostFactory){
     $scope.isProcessing = false;
     $scope.showErrorMessage = false;
-    var serverRoute = 'http://localhost:11705'; //replace this
+    var serverRoute = HostFactory.serverName;
 	$scope.user = {
 		name:"",
 		userName:"",
@@ -58,4 +58,4 @@ angular.module('app').controller('SignUpController', function($scope, $http, $lo
             });
     };
 
-});
+}]);
