@@ -4,7 +4,7 @@
 /**
  * Created by jcespinoza on 6/21/15.
  */
-'use strict';
+//'use strict';
 angular.module('app').controller('SignUpController', function($scope, $http, $location){
     $scope.isProcessing = false;
     $scope.showErrorMessage = false;

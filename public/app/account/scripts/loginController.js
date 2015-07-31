@@ -2,9 +2,9 @@
  * Created by jcespinoza on 6/21/15.
  */
 'use strict';
-angular.module('app').controller('LoginController', ['HostFactory', function($cookies,$scope, $http,HostFactory){
+angular.module('app').controller('LoginController', ['HostFactory', '$scope', function($cookies,$scope, $http,HostFactory){
     $scope.user = {};
-  console.log(HostFactory.serverName);
+  //console.log(HostFactory.serverName);
     $scope.showErrorMessage = false;
     $scope.isProcessing = false;
     $scope.checkPasswordLengthIsAcceptable = function(password){
