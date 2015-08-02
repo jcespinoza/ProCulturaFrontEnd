@@ -8,22 +8,23 @@
 angular.module('app').controller('SignUpController', ['$scope','userService','$location', function($scope, userService, $location){
     $scope.isProcessing = false;
     $scope.showErrorMessage = false;
+    $scope.confPassword = '';
 
 	$scope.user = {
 		name:"",
 		userName:"",
 		email:"",
-		password: "",
-        confirmPassword: ""
+		password: ""
 
 	};
-
+    
     $scope.confirmPassword = function() {
-    	if($scope.user.password === $scope.user.confirmPassword){
+    	if($scope.user.password === $scope.confirmPassword){
             return true;
         }
     	return false;
     };
+
 
     $scope.createUser = function(){ 
             $scope.isProcessing = true;
