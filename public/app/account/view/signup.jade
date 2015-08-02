@@ -12,17 +12,12 @@ div
               .progress-bar(style='width: 100%')
       // End Modal dialog
 
-      form.form-login(ng-submit="createUser(user,isProcessing)")
+      form.form-login(ng-submit="createUser()")
          h2.form-login-heading(style='color: black')
             i.fa.fa-pencil-square-o.fa-2x(style='color: white')
             |   registrate a
             strong(style='color: red')  ProCultura
          .login-wrap
-            //.input-group
-            //   strong#basic-addon1.input-group-addon
-            //      i.fa.fa-user(style='color: black')
-            //   input.form-control(input type="text", ng-model="user.userName",required ,placeholder='Usuario', aria-describedby='basic-addon1')
-            //br
             .input-group
                strong#basic-addon1.input-group-addon
                   i.fa.fa-font(style='color: black')
