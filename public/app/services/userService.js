@@ -1,4 +1,4 @@
-angular.module('app').factory('userService', ['$http', 'HostFactory', function($http, HostFactory){
+angular.module('app').factory('UserService', ['$http', 'HostFactory', function($http, HostFactory){
 	
 	var baseUrl = HostFactory.serverName ;
 	var userFactory = {};
@@ -6,6 +6,6 @@ angular.module('app').factory('userService', ['$http', 'HostFactory', function($
 	userFactory.createUser = function(user){
         return $http.post(baseUrl + '/api/User', user);
 	};
-	
+
 	return userFactory;
 }]);

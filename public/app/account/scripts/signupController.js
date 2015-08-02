@@ -5,7 +5,7 @@
  * Created by jcespinoza on 6/21/15.
  */
 //'use strict';
-angular.module('app').controller('SignUpController', ['$scope','userService','$location', function($scope, userService, $location){
+angular.module('app').controller('SignUpController', ['$scope','UserService','$location', function($scope, UserService, $location){
     $scope.isProcessing = false;
     $scope.showErrorMessage = false;
     $scope.confPassword = '';
@@ -28,7 +28,7 @@ angular.module('app').controller('SignUpController', ['$scope','userService','$l
 
     $scope.createUser = function(){ 
             $scope.isProcessing = true;
-            userService.createUser($scope.user)
+            UserService.createUser($scope.user)
             .success(function(data, status, headers, config) {
                 $scope.isProcessing = false;
                 $location.path('/login');
