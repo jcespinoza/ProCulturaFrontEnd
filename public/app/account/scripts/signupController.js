@@ -5,50 +5,30 @@
  * Created by jcespinoza on 6/21/15.
  */
 //'use strict';
-angular.module('app').controller('SignUpController', ['$scope', '$http', '$location', 'HostFactory', function($scope, $http, $location, HostFactory){
+angular.module('app').controller('SignUpController', ['$scope','UserService','$location', function($scope, UserService, $location){
     $scope.isProcessing = false;
     $scope.showErrorMessage = false;
-    var serverRoute = HostFactory.serverName;
+    $scope.confPassword = '';
+
 	$scope.user = {
 		name:"",
 		userName:"",
 		email:"",
-		password: "",
-        confirmPassword: ""
+		password: ""
 
 	};
-
+    
     $scope.confirmPassword = function() {
-    	if($scope.user.password === $scope.user.confirmPassword){
+    	if($scope.user.password === $scope.confirmPassword){
             return true;
         }
     	return false;
     };
 
-//borrar estoplease
 
-    $scope.checkUserName = function(){
-       for(var i = 0; i < $scope.existentsUsers.length; i++){
-            var obj = $scope.existentsUsers[i];
-            if($scope.user.userName === obj.userName)
-                return true;
-       }
-
-       return false;
-    };
-
-    $scope.checkEmail = function(){
-      for(var i = 0; i < $scope.existentsUsers.length; i++){
-            var obj = $scope.existentsUsers[i];
-            if($scope.user.email === obj.email)
-                return true;
-       }
-       return false;
-    };
-
-    $scope.createUser = function(user){
-        $scope.isProcessing = true;
-        $http.post(serverRoute + '/api/User', user)
+    $scope.createUser = function(){ 
+            $scope.isProcessing = true;
+            UserService.createUser($scope.user)
             .success(function(data, status, headers, config) {
                 $scope.isProcessing = false;
                 $location.path('/login');
@@ -56,6 +36,11 @@ angular.module('app').controller('SignUpController', ['$scope', '$http', '$locat
                 $scope.isProcessing = false;
                 $scope.showErrorMessage = true;
             });
+
+
     };
+
+
+    
 
 }]);
