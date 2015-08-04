@@ -1,7 +1,7 @@
 /**
  * Created by william on 8/3/15.
  */
-angular.module('app').factory('LoginService', ['$http', 'HostFactory', function($http, HostFactory){
+angular.module('app').service('LoginService', ['$http', 'HostFactory', function($http, HostFactory){
 	
 	var loginService = {};
 
