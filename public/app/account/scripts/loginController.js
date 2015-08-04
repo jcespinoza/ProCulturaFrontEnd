@@ -2,21 +2,18 @@
  * Created by jcespinoza on 6/21/15.
  */
 'use strict';
-angular.module('app').controller('LoginController', ['$cookies', '$scope', '$http', 'HostFactory',
-    function($cookies,$scope, $http, HostFactory){
+angular.module('app').controller('LoginController', ['$cookies', '$scope', 'LoginService',
+    function($cookies,$scope, LoginService){
         $scope.user = {};
         $scope.showErrorMessage = false;
         $scope.isProcessing = false;
 
-        $scope.checkPasswordLengthIsAcceptable = function(password){
-            return password !== undefined && password.length > 8;
-        };
 
-        $scope.signIn = function(userModel){
+        $scope.signIn = function(){
             $scope.showErrorMessage = false;
             $scope.isProcessing = true;
 
-            $http.post(HostFactory.serverName + '/api/login', userModel).
+            LoginService.login($scope.user).
                 success(function(data, status, headers, config) {
                     $cookies.put('Token',data.AccessToken);
                     $scope.isProcessing = false;
