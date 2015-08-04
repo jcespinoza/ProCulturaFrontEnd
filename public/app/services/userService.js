@@ -1,4 +1,4 @@
-angular.module('app').factory('UserService', ['$http', 'HostFactory', function($http, HostFactory){
+angular.module('app').service('UserService', ['$http', 'HostFactory', function($http, HostFactory){
 	
 	var baseUrl = HostFactory.serverName ;
 	var userFactory = {};
