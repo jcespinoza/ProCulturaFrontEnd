@@ -45,6 +45,8 @@ div
             br
             p(style="text-align: center; color: red", ng-show='user.password !== user.confirmPassword')
                | Los passwords no coinciden
+            p(style="text-align: center; color: green", ng-show='user.password == user.confirmPassword')
+               | passwords coinciden
 
             hr
             button.btn.btn-warning.btn-block(type='submit',ng-Submit='createUser(user)', ng-disabled='isProcessing', value="Create Account")
