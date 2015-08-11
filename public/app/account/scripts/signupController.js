@@ -20,9 +20,9 @@ angular.module('app').controller('SignUpController', function($scope, $http, $lo
 
     $scope.confirmPassword = function() {
     	if($scope.user.password === $scope.user.confirmPassword){
-            return true;
-        }
-    	return false;
+            $scope.showErrorMessage = false;
+        }else
+    	    $scope.showErrorMessage = true;
     };
 
 //borrar estoplease
