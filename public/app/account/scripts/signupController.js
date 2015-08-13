@@ -1,10 +1,7 @@
 /**
  * Created by jcespinoza on 6/21/15.
  */
-/**
- * Created by jcespinoza on 6/21/15.
- */
-//'use strict';
+'use strict';
 angular.module('app').controller('SignUpController', ['$scope','UserService','$location', function($scope, UserService, $location){
     $scope.isProcessing = false;
     $scope.showErrorMessage = false;
@@ -31,7 +28,6 @@ angular.module('app').controller('SignUpController', ['$scope','UserService','$l
     	return false;
     };
 
-
     $scope.createUser = function(){ 
             $scope.isProcessing = true;
             UserService.createUser($scope.user)
@@ -44,11 +40,5 @@ angular.module('app').controller('SignUpController', ['$scope','UserService','$l
                 $scope.isProcessing = false;
                 $scope.showErrorMessage = true;
             });
-
-
     };
-
-
-    
-
 }]);
