@@ -17,15 +17,11 @@ angular.module('app').controller('SignUpController', ['$scope','UserService','$l
 	};
     
     $scope.confirmPassword = function() {
-        console.log("Confirm Pass");
-    	if($scope.user.password === $scope.confirmPassword){
-            $scope.matchedPassword =true;
-            console.log("Show");
-            return true;
+    	if($scope.user.password === $scope.user.confirmPassword){
+            $scope.showErrorMessage = false;
+        }else{
+    	    $scope.showErrorMessage = true;
         }
-        console.log("Hide");
-        $scope.matchedPassword =false;
-    	return false;
     };
 
     $scope.createUser = function(){ 

@@ -2,12 +2,12 @@
  * Created by jcespinoza on 6/21/15.
  */
 'use strict';
+
 angular.module('app').controller('LoginController', ['$cookies', '$scope', 'LoginService','$location',
     function($cookies,$scope, LoginService, $location){
         $scope.user = {};
         $scope.showErrorMessage = false;
         $scope.isProcessing = false;
-
 
         $scope.signIn = function(){
             $scope.showErrorMessage = false;
@@ -21,10 +21,10 @@ angular.module('app').controller('LoginController', ['$cookies', '$scope', 'Logi
                     $scope.isProcessing = false;
                 }).
                 error(function(data, status, headers, config) {
-                    toastr.error('Error');
+                    toastr.error(data);
                     console.log('ERROR!');
                     $scope.isProcessing = false;
                     $scope.showErrorMessage = true;
                 });
-    };
+        };
 }]);
