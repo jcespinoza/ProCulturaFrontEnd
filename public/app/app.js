@@ -17,10 +17,10 @@ angular.module('app', ['ngRoute', 'ngResource','ngCookies']).config(function($ro
         if(rejection === 'not authorized'){
             $location.path('/');
         }
-        console.log(rejection);
+        //console.log(rejection);
     });
 }).run(function($rootScope, $location){
     $rootScope.$on('$routeChangeStart', function(event, next, current){
-        console.log(next.templateUrl);
+        //console.log(next.templateUrl);
     });
 });
