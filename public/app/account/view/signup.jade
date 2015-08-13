@@ -36,9 +36,9 @@ div
             .input-group
                strong#basic-addon1.input-group-addon
                   i.fa.fa-lock(style='color: black')
-               input.form-control(input type="password",ng-model='confPassword' , ng-change="ConfirmPassword()", required, pattern="^[a-zA-Z0-9]{8,}$", title="8 Alphanumeric characters minimum", id="passConfirmed", placeholder='Confirmar Contraseña',  aria-describedby='basic-addon1')
+               input.form-control(input type="password",ng-model='confPassword' , ng-change="confirmPassword()", required, pattern="^[a-zA-Z0-9]{8,}$", title="8 Alphanumeric characters minimum", id="passConfirmed", placeholder='Confirmar Contraseña',  aria-describedby='basic-addon1')
             br
-            p(style="text-align: center; color: red", ng-show='user.password !== confPassword')
+            p(style="text-align: center; color: red", ng-show='matchedPassword')
                | Los passwords no coinciden
 
             hr
