@@ -16,7 +16,7 @@ angular.module('app').controller('LoginController', ['$cookies', '$scope', 'Logi
             LoginService.login($scope.user).
                 success(function(data, status, headers, config) {
                     toastr.success('Login Succesfully');
-                    $location.path('/signup');
+                    $location.path('/');
                     $cookies.put('Token',data.AccessToken);
                     $scope.isProcessing = false;
                 }).
