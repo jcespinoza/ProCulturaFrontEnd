@@ -2,9 +2,8 @@
  * Created by jcespinoza on 6/21/15.
  */
 'use strict';
-angular.module('app').controller('AuthController', ['HostFactory', '$scope', function($cookies,$scope, $http,HostFactory){
+angular.module('app').controller('LoginController', ['HostFactory', '$scope', function($cookies,$scope, $http,HostFactory){
     $scope.user = {};
-  //console.log(HostFactory.serverName);
     $scope.showErrorMessage = false;
     $scope.isProcessing = false;
 
@@ -16,7 +15,7 @@ angular.module('app').controller('AuthController', ['HostFactory', '$scope', fun
         $scope.showErrorMessage = false;
         $scope.isProcessing = true;
 
-        $http.post(HosteFactory.serverName + '/api/login', userModel).
+        $http.post(HostFactory.serverName + '/api/login', userModel).
             success(function(data, status, headers, config) {
                 $cookies.put('Token',data.AccessToken);
                 $scope.isProcessing = false;
