@@ -24,15 +24,15 @@ angular.module('app').controller('SignUpController', ['$scope','UserService','$l
         }
     };
 
-    $scope.createUser = function(){ 
+    $scope.createUser = function(){ s
             $scope.isProcessing = true;
             UserService.createUser($scope.user)
             .success(function(data, status, headers, config) {
                 $scope.isProcessing = false;
-                toastr.info('Se creo exitosamente','Crear Usuario');
+                toastr.success(data.Message);
                 $location.path('/login');
-
             }).error(function(data, status, headers, config) {
+                toastr.error(data);
                 $scope.isProcessing = false;
                 $scope.showErrorMessage = true;
             });
