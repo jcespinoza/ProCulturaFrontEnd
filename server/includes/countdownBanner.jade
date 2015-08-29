@@ -1,0 +1,38 @@
+//
+   Created by JuanCarlos on 8/29/2015.
+block countdown-banner
+    .banner
+        .container
+            .center
+                h1.title Preparate para tu siguiente evento!
+                p Comentarios aquí..!
+                // Clock
+                .clock.clearfix
+                    .clock-item.clock-days
+                        .wrap
+                            .inner
+                                #canvas-days.clock-canvas
+                                .clock-content
+                                    p.val 9
+                                    strong.typ.type-days(style='color: white') DIAS
+                    .clock-item.clock-hours
+                        .wrap
+                            .inner
+                                #canvas-hours.clock-canvas
+                                .clock-content
+                                    p.val 0
+                                    p.typ.type-hours HORAS
+                    .clock-item.clock-minutes
+                        .wrap
+                            .inner
+                                #canvas-minutes.clock-canvas
+                                .clock-content
+                                    p.val 0
+                                    p.typ.type-minutes MINUTOS
+                    .clock-item.clock-seconds
+                        .wrap
+                            .inner
+                                #canvas-seconds.clock-canvas
+                                .clock-content
+                                    p.val 0
+                                    p.typ.type-seconds SEGUNDOS
