@@ -1,0 +1,76 @@
+//
+   Created by JuanCarlos on 8/28/2015.
+block navbar-header
+    header.header-container
+        .header-top
+            .container
+                .row
+                    .col-md-6
+                        ul.login-details.clearfix
+                            li
+                                a.agenticon(href='#') Agent Login
+                            li
+                                a.customericon(href='#') Customer Login
+                            li
+                                p.membericon Not a Member?
+                            li
+                                a.pri-color(href='#') Register Now
+                    .col-md-6
+                        .social-icon.pull-right
+                            a.facebook.fa.fa-facebook(href='#')
+                            a.twitter.fa.fa-twitter(href='#')
+                            a.googleplus.fa.fa-google-plus(href='#')
+                            a.dribble.fa.fa-cogs(href='#')
+        // Main Header
+        .main-header.affix
+            // Moblie Nav Wrapper
+            .mobile-nav-wrapper
+                .container
+                    // logo
+                    #logo
+                        a(href='/')
+                            img(src='img/logo.png', alt='')
+                    #sb-search.sb-search
+                        form
+                            input#search.sb-search-input(placeholder='Search', type='text', name='search')
+                            input.sb-search-submit(type='submit', value='')
+                            span.sb-icon-search
+                    // mobile-menu-icon
+                    .mobile-menu-icon
+                        i.fa.fa-bars
+                    // Nav
+                    nav.main-nav.mobile-menu
+                        ul.clearfix
+                            li.parent.active
+                                a(href='/') Home
+                                // Sub memu
+                                ul.sub-menu
+                                    li.arrow
+                                    li
+                                        a(href='/') Home-1
+                            li.parent
+                                a(href='#') Events
+                                // Sub memu
+                                ul.sub-menu
+                                    li.arrow
+                                    li
+                                        a(href='/') Event
+                                    li
+                                        a(href='/') Event-Sidebar-Left
+                                    li
+                                        a(href='/') Event-Sidebar-Right
+                                    li
+                                        a(href='/') Event Detail
+                            li
+                                a(href='#') Directions
+                            li
+                                a(href='/') Events TV
+                            li.parent
+                                a(href='/') Blog
+                                // Sub memu
+                                ul.sub-menu
+                                    li.arrow
+                                    li
+                                        a(href='/') Event Blog
+                                    li
+                                        a(href='/') Event Single-Blog
