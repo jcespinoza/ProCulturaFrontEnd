@@ -58,7 +58,7 @@ angular.module("app").controller("mainController", function($scope){
             description: "Lorem ipsum dolor sit amet, feugiat delicata id cum, eu sit. [...]",
             isSoldOut : true,
             isFree: false,
-            isPaid: true
+            isPaid: false
         },
         {
             title : "Using Social Services Increase Your Sales",
