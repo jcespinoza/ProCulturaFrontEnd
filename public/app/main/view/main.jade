@@ -30,7 +30,7 @@ section.events.newsection
                                 .event-content
                                     h3.title {{event.title}}
                                     p {{event.description}}
-                                    a.btn.btn-pri(href='#', ng-show="event.isAvailable") Buy tıcket
+                                    a.btn.btn-pri(href='#', ng-show="event.isPaid") Buy tıcket
                                     a.btn.btn-disabled.disabled(href='#', ng-show="event.isSoldOut") Sold Out
                                     a.btn.btn-sec(href='#', ng-show="event.isFree") Free Entry
                                 .links.clearfix
@@ -47,86 +47,21 @@ section.events.newsection
                                             a(href='#')
                                                 i.icon.fa.fa-comment
                                                 | 33
-
                     // row
             // Tabs-2
             #tabs-2(ng-show="showPopularEvents")
                 .event-container
                     .row
-                        .col-md-3
+                        .col-md-3(ng-repeat="event in popularEvents")
                             .event
                                 .eventsimg
                                     img(src='img/515x390.gif', alt='')
                                 .event-content
-                                    h3.title Using Social Services Increase Your Sales
-                                    p Lorem ipsum dolor sit amet, feugiat delicata id cum, eu sit. [...]
-                                    a.btn.btn-pri(href='#') buy tıcket
-                                .links.clearfix
-                                    ul
-                                        li
-                                            a.st_sharethis_large(displaytext='ShareThis')
-                                                i.icon.fa.fa-share
-                                                |  share
-                                        li
-                                            a(href='#')
-                                                i.icon.fa.fa-heart
-                                                | 26
-                                        li
-                                            a(href='#')
-                                                i.icon.fa.fa-comment
-                                                | 33
-                        .col-md-3
-                            .event
-                                .eventsimg
-                                    img(src='img/515x390.gif', alt='')
-                                .event-content
-                                    h3.title Using Social Services Increase Your Sales
-                                    p Lorem ipsum dolor sit amet, feugiat delicata id cum, eu sit. [...]
-                                    a.btn.btn-pri(href='#') buy tıcket
-                                .links.clearfix
-                                    ul
-                                        li
-                                            a.st_sharethis_large(displaytext='ShareThis')
-                                                i.icon.fa.fa-share
-                                                |  share
-                                        li
-                                            a(href='#')
-                                                i.icon.fa.fa-heart
-                                                | 26
-                                        li
-                                            a(href='#')
-                                                i.icon.fa.fa-comment
-                                                | 33
-                        .col-md-3
-                            .event
-                                .eventsimg
-                                    img(src='img/515x390.gif', alt='')
-                                .event-content
-                                    h3.title Using Social Services Increase Your Sales
-                                    p Lorem ipsum dolor sit amet, feugiat delicata id cum, eu sit. [...]
-                                    a.btn.btn-pri(href='#') buy tıcket
-                                .links.clearfix
-                                    ul
-                                        li
-                                            a.st_sharethis_large(displaytext='ShareThis')
-                                                i.icon.fa.fa-share
-                                                |  share
-                                        li
-                                            a(href='#')
-                                                i.icon.fa.fa-heart
-                                                | 26
-                                        li
-                                            a(href='#')
-                                                i.icon.fa.fa-comment
-                                                | 33
-                        .col-md-3
-                            .event
-                                .eventsimg
-                                    img(src='img/515x390.gif', alt='')
-                                .event-content
-                                    h3.title Using Social Services Increase Your Sales
-                                    p Lorem ipsum dolor sit amet, feugiat delicata id cum, eu sit. [...]
-                                    a.btn.btn-pri(href='#') buy tıcket
+                                    h3.title {{event.title}}
+                                    p {{event.description}}
+                                    a.btn.btn-pri(href='#', ng-show="event.isPaid") Buy tıcket
+                                    a.btn.btn-disabled.disabled(href='#', ng-show="event.isSoldOut") Sold Out
+                                    a.btn.btn-sec(href='#', ng-show="event.isFree") Free Entry
                                 .links.clearfix
                                     ul
                                         li
@@ -142,4 +77,4 @@ section.events.newsection
                                                 i.icon.fa.fa-comment
                                                 | 33
                     // row
-            a.btn.btn-border.btn-lg(href='event.html') load more
+            a.btn.btn-border.btn-lg(href='/') load more

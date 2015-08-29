@@ -20,28 +20,28 @@ angular.module("app").controller("mainController", function($scope){
             description: "Lorem ipsum dolor sit amet, feugiat delicata id cum, eu sit. [...]",
             isSoldOut : false,
             isFree: false,
-            isAvailable: true
+            isPaid: true
         },
         {
             title : "Using Social Services Increase Your Sales",
             description: "Lorem ipsum dolor sit amet, feugiat delicata id cum, eu sit. [...]",
             isSoldOut : true,
             isFree: false,
-            isAvailable: false
+            isPaid: false
         },
         {
             title : "Using Social Services Increase Your Sales",
             description: "Lorem ipsum dolor sit amet, feugiat delicata id cum, eu sit. [...]",
             isSoldOut : false,
             isFree: false,
-            isAvailable: true
+            isPaid: true
         },
         {
             title : "Using Social Services Increase Your Sales",
             description: "Lorem ipsum dolor sit amet, feugiat delicata id cum, eu sit. [...]",
             isSoldOut : false,
             isFree: false,
-            isAvailable: true
+            isPaid: true
         }
     ];
 
@@ -50,29 +50,29 @@ angular.module("app").controller("mainController", function($scope){
             title : "Using Social Services Increase Your Sales",
             description: "Lorem ipsum dolor sit amet, feugiat delicata id cum, eu sit. [...]",
             isSoldOut : false,
-            isFree: false,
-            isAvailable: true
+            isFree: true,
+            isPaid: false
         },
         {
             title : "Using Social Services Increase Your Sales",
             description: "Lorem ipsum dolor sit amet, feugiat delicata id cum, eu sit. [...]",
             isSoldOut : true,
             isFree: false,
-            isAvailable: false
+            isPaid: true
         },
         {
             title : "Using Social Services Increase Your Sales",
             description: "Lorem ipsum dolor sit amet, feugiat delicata id cum, eu sit. [...]",
             isSoldOut : false,
             isFree: false,
-            isAvailable: true
+            isPaid: true
         },
         {
             title : "Using Social Services Increase Your Sales",
             description: "Lorem ipsum dolor sit amet, feugiat delicata id cum, eu sit. [...]",
             isSoldOut : false,
-            isFree: false,
-            isAvailable: true
+            isFree: true,
+            isPaid: false
         }
     ];
 });
