@@ -1,0 +1,26 @@
+//
+   Created by JuanCarlos on 8/29/2015.
+
+block event-search-form
+    section.eventform.newsection
+        .container
+            .row
+                .col-md-3
+                    small Find what you want
+                    h2.title Event or Conference
+                .col-md-9.eventform-con
+                    form
+                        .form-input.search-location
+                            input(type='text', value='', placeholder='Select Location')
+                            i.icon.icon-s.fa.fa-search
+                            button.icon.fa.fa-globe
+                        .form-input
+                            input.date_timepicker_start(placeholder='mm/dd/yy')
+                            button.open.icon.fa.fa-calendar(type='button', value='open')
+                        .form-input
+                            .styled-select
+                                select
+                                    option Select Fields
+                                    option The second option
+                        .form-input
+                            button.btn.btn-pri Fınd Event

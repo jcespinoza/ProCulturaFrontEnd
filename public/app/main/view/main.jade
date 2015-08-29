@@ -1,9 +1,80 @@
 //
    Created by jcespinoza on 6/21/15.
 
+.div(ng-include="'partials/main/view/countdownBanner'")
+.div(ng-include="'partials/main/view/eventSearchForm'")
 .container
    .jumbotron
        h1 ProCultura
        h3 Bienvenido a ProCultura! El mejor lugar para encontrar eventos culturales cerca de tí.
    .row
        .col-md-6
+
+section.events.newsection
+    .container
+        // Tabs memu
+        .tabs.ui-tabs.ui-widget.ui-widget-content.ui-corner-all
+            ul.clearfix.ui-tabs-nav.ui-helper-reset.ui-helper-clearfix.ui-widget-header.ui-corner-all(role='tablist')
+                li.ui-state-default.ui-corner-top.ui-tabs-active.ui-state-active(role='tab', tabindex='0', aria-controls='tabs-1', aria-labelledby='ui-id-1', aria-selected='true')
+                    a#ui-id-1.ui-tabs-anchor(href='#', role='presentation', tabindex='-1', ng-click="showEvents('upcoming')") Up Coming Events
+                li.ui-state-default.ui-corner-top(role='tab', tabindex='-1', aria-controls='tabs-2', aria-labelledby='ui-id-2', aria-selected='false')
+                    a#ui-id-2.ui-tabs-anchor(href='#', role='presentation', tabindex='-1', ng-click="showEvents('popular')") Popular Events
+            // Tabs-1
+            #tabs-1(ng-show="showUpCommingEvents")
+                .event-container
+                    .row
+                        .col-md-3(ng-repeat="event in upComingEvents")
+                            .event
+                                .eventsimg
+                                    img(src='img/515x390.gif', alt='')
+                                .event-content
+                                    h3.title {{event.title}}
+                                    p {{event.description}}
+                                    a.btn.btn-pri(href='#', ng-show="event.isPaid") Buy tıcket
+                                    a.btn.btn-disabled.disabled(href='#', ng-show="event.isSoldOut") Sold Out
+                                    a.btn.btn-sec(href='#', ng-show="event.isFree") Free Entry
+                                .links.clearfix
+                                    ul
+                                        li
+                                            a.st_sharethis_large(displaytext='ShareThis')
+                                                i.icon.fa.fa-share
+                                                |  share
+                                        li
+                                            a(href='#')
+                                                i.icon.fa.fa-heart
+                                                | 26
+                                        li
+                                            a(href='#')
+                                                i.icon.fa.fa-comment
+                                                | 33
+                    // row
+            // Tabs-2
+            #tabs-2(ng-show="showPopularEvents")
+                .event-container
+                    .row
+                        .col-md-3(ng-repeat="event in popularEvents")
+                            .event
+                                .eventsimg
+                                    img(src='img/515x390.gif', alt='')
+                                .event-content
+                                    h3.title {{event.title}}
+                                    p {{event.description}}
+                                    a.btn.btn-pri(href='#', ng-show="event.isPaid") Buy tıcket
+                                    a.btn.btn-disabled.disabled(href='#', ng-show="event.isSoldOut") Sold Out
+                                    a.btn.btn-sec(href='#', ng-show="event.isFree") Free Entry
+                                .links.clearfix
+                                    ul
+                                        li
+                                            a.st_sharethis_large(displaytext='ShareThis')
+                                                i.icon.fa.fa-share
+                                                |  share
+                                        li
+                                            a(href='#')
+                                                i.icon.fa.fa-heart
+                                                | 26
+                                        li
+                                            a(href='#')
+                                                i.icon.fa.fa-comment
+                                                | 33
+                    // row
+            a.btn.btn-border.btn-lg(href='/') load more

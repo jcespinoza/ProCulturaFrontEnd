@@ -4,24 +4,5 @@
 extends ../includes/layout
 
 block main-content
-    .navbar.navbar-inverse.navbar-fixed-top
-        .container
-            .navbar-header
-                a.navbar-brand(href="/") ProCultura
-                    h5 Cultura cerca de tí
-            .navbar-collapse.collapse
-                ul.nav.navbar-nav
-                    li
-                        a(href="/") Inicio
-                    li
-                        a(href="/") Eventos
-                    li
-                        a(href="/login") Entrar
-                    li
-                        a(href="/signup") Registrarse
-
     section.content
         div(ng-view)
-
-    footer.container.text-center
-        p &copy; 2015 ProCultura

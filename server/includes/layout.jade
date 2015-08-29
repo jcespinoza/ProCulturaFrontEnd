@@ -5,12 +5,18 @@ doctype
 html
     head
         title ProCultura
+        link(href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,900,300italic,400italic,600italic,700italic', rel='stylesheet', type='text/css')
         link(rel="stylesheet", href="/vendor/bootstrap/dist/css/bootstrap.min.css")
-        link(rel="stylesheet", href="/vendor/components-font-awesome/css/font-awesome.css")
-        link(rel="stylesheet", href="/css/site.css")
-        link(rel="stylesheet", href="/css/style.css")
+        link(rel="stylesheet", href="/vendor/components-font-awesome/css/font-awesome.min.css")
+        link(rel="stylesheet", href="/css/jquery.datetimepicker.css")
+        link(rel="stylesheet", href="/css/main.css")
         link(rel="stylesheet", href="/vendor/toastr/toastr.css")
         base(href="/")
     body(ng-app="app")
+        block navbar-header
+            include navbar.jade
         block main-content
+
+        block footer
+            include footer
         include scripts
