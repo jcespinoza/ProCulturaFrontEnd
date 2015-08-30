@@ -24,7 +24,7 @@ angular.module('app').controller('SignUpController', ['$scope','UserService','$l
         }
     };
 
-    $scope.createUser = function(){ s
+    $scope.createUser = function(){
             $scope.isProcessing = true;
             UserService.createUser($scope.user)
             .success(function(data, status, headers, config) {

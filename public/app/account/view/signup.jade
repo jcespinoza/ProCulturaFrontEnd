@@ -1,56 +1,64 @@
-div
-   .container
+section.sub-banner.newsection
+    .container
+        h2.title Registro
+        ul.breadcrumb
+            li
+                a(href='#') Home
+            li Registro
 
-      // Modal Dialog
-      .modal.fade(data-backdrop='static', data-keyboard='false', tabindex='-1', role='dialog', aria-hidden='true', style='padding-top:30%; overflow-y:visible;')
-      .modal-dialog.modal-m(ng-show='isProcessing')
-        .modal-content
-          .modal-header
+// Modal Dialog
+.modal.fade(data-backdrop='static', data-keyboard='false', tabindex='-1', role='dialog', aria-hidden='true', style='padding-top:30%; overflow-y:visible;')
+.modal-dialog.modal-m(ng-show='isProcessing')
+    .modal-content
+        .modal-header
             h3(style='margin:0;')
-          .modal-body
+        .modal-body
             .progress.progress-striped.active(style='margin-bottom:0;')
-              .progress-bar(style='width: 100%')
-      // End Modal dialog
+                .progress-bar(style='width: 100%')
+// End Modal dialog
 
-      form.form-login(ng-submit="createUser()" name='signupForm')
-         h2.form-login-heading(style='color: black')
-            i.fa.fa-pencil-square-o.fa-2x(style='color: white')
-            |   registrate a
-            strong(style='color: red')  ProCultura
-         .login-wrap
-            .input-group
-               strong#basic-addon1.input-group-addon
-                  i.fa.fa-font(style='color: black')
-               input.form-control(type='text', ng-model="user.name", required placeholder='Nombre Completo', aria-describedby='basic-addon1')
-            br
-            .input-group
-               strong#basic-addon1.input-group-addon
-                  i.fa.fa-at(style='color: black')
-               input.form-control(input type="email", ng-model="user.email", required, placeholder='Email', aria-describedby='basic-addon1')
-            hr
-            .input-group
-               strong#basic-addon1.input-group-addon
-                  i.fa.fa-lock(style='color: black')
-               input.form-control(input type="password",ng-change="confirmPassword()", ng-model="user.password", ng-pattern="'^[a-zA-Z0-9]{8,}$'", required, title="8 Alphanumeric characters minimum", placeholder='Contraseña', aria-describedby='basic-addon1')
-            br
-            .input-group
-               strong#basic-addon1.input-group-addon
-                  i.fa.fa-lock(style='color: black')
-               input.form-control(input type="password",ng-model='user.confirmPassword' , ng-change="confirmPassword()", required, ng-pattern="'^[a-zA-Z0-9]{8,}$'", title="8 Alphanumeric characters minimum", id="passConfirmed", placeholder='Confirmar Contraseña',  aria-describedby='basic-addon1')
-            br
-            
-            p(style="text-align: center; color: red", ng-show='showErrorMessage')
+.contact.newsection
+    .container
+        .row
+            .col-md-6.col-md-offset-3
+                h2.title Regístrese a ProCultura
+                form#contactform(method='post', ng-submit='createUser()', name="signupForm" ng-disabled='isProcessing')
+                    .response
+                    p
+                        label(for='name')
+                            | Name
+                            span *
+                        input#contactname.textflied(type='text', value='', ng-model='user.name', name='name', placeholder='Nombre')
+                        i.icon.fa.fa-user
+                    p
+                        label(for='username')
+                            | Usuario o Email
+                            span *
+                        input#contactname.textflied(type='text', value='', ng-model='user.email', name='username', placeholder='Usuario')
+                        i.icon.fa.fa-envelope
+                    p
+                        label(for='password')
+                            | Password
+                            span *
+                        input#email.textflied(name='password', type='password', value='', ng-change="confirmPassword()", ng-model="user.password", ng-pattern="'^[a-zA-Z0-9]{8,}$'", required, title="8 Alphanumeric characters minimum", placeholder='Contraseña')
+                        i.icon.fa.fa-lock
+                    p
+                        label(for='confirmPassword')
+                            | Password
+                            span *
+                        input#email.textflied(name='confirmPassword', type='password', value='', ng-change="confirmPassword()", ng-model="user.confirmPassword", ng-pattern="'^[a-zA-Z0-9]{8,}$'", required, title="8 Alphanumeric characters minimum", placeholder='Confirmar Contraseña')
+                        i.icon.fa.fa-lock
 
-               | Los passwords no coinciden
-            p(style="text-align: center; color: green", ng-show='!showErrorMessage')
-               | Los passwords coinciden
-           
-           
+                    p(style="text-align: center; color: red", ng-show='showErrorMessage')
+                        | Los passwords no coinciden
+                    p(style="text-align: center; color: green", ng-show='!showErrorMessage')
+                        | Los passwords coinciden
 
-            hr
-            button.btn.btn-warning.btn-block(type='submit', ng-disabled="signupForm.$invalid", value="Create Account")
-               i.fa.fa-unlock
-               |  REGISTRAR
-      // END FORM
-            p(style="text-align:center;color:red", ng-show="showErrorMessage")
-               | No Se pudo crear el usuario
+                    p
+                        button#signupButton.btn.btn-pri(type='submit', name='signup', title='Registrarse', ng-disabled="signupForm.$invalid") Registrar
+
+                    .registration
+                        | ¿Ya posee una cuenta?
+                        br
+                        a(href='/login')
+                            | Ingresar
