@@ -22,7 +22,7 @@ section.sub-banner.newsection
         .row
             .col-md-6.col-md-offset-3
                 h2.title Ingrese a ProCultura
-                form#contactform(method='post', ng-submit='signIn()', ng-disabled='isProcessing')
+                form#contactform(name="loginForm", method='post', ng-submit='signIn()', ng-disabled='isProcessing')
                     .response  
                     p
                         label(for='username')
