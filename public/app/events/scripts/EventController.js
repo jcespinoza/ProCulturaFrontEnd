@@ -5,11 +5,12 @@
 angular.module('app').controller('EventController',["$scope","EventService","$location",
     function($scope,EventService, $location){
 
-            $scope.event ={};
+           $scope.event ={};
 
-            console.log("Evento vacio");
+           $scope.isProcessing = false;
+           $scope.showErrorMessage = true;
+
             $scope.events = EventService.getEvents();
-            console.log(events);
 
 
         $scope.createEvent = function(){
