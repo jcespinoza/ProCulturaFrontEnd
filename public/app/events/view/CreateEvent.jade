@@ -1,36 +1,60 @@
-style h1{color : #000000;text-align : center;font-family: "SIMPSON";}form {width: 300px;margin: 0 auto;}
-h1 Create an Event
-br
-br
-form( id="eventForm")
-    p Event Name:
-    input(type ="text")
-    br
-    br
-    p Event Start Date:
-    input(type="date" name="startDate")
-    br
-    br
-    p Event End Date:
-    input(type="date" name="endDate")
-    br
-    br
-    p Summary:
-    textarea(form="eventForm")
-    br
-    br
-    p Location:
-    input(type="text")
-    br
-    br
-    p Front Image:
-    input(type="file")
-    br
-    br
-    p Price:
-    input(type ="number")
-    br
-    br
-    input(type="submit")
-    br
-    br
+section.sub-banner.newsection
+    .container
+        h2.title Create Event
+        ul.breadcrumb
+            li
+                a(href='/') Home
+            li Create Event
+// Modal Dialog
+.modal.fade(data-backdrop='static', data-keyboard='false', tabindex='-1', role='dialog', aria-hidden='true', style='padding-top:30%; overflow-y:visible;')
+.modal-dialog.modal-m(ng-show='isProcessing')
+    .modal-content
+        .modal-header
+            h3(style='margin:0;')
+        .modal-body
+            .progress.progress-striped.active(style='margin-bottom:0;')
+                .progress-bar(style='width: 100%')
+// End Modal dialog
+
+.contact.newsection
+    .container
+        .row
+            .col-md-6.col-md-offset-3
+                h2.title Create a new Event
+                form#contactform(name="eventForm", method='post', ng-submit='createEvent()', ng-disabled='isProcessing')
+                    .response  
+                    p
+                        label(for='eventName')
+                            | Event Name
+                            span *
+                        input#contactname.textflied(type='text', value='', required, ng-model='event.name', name='eventName', placeholder='Event Name')
+                        i.icon.fa.fa-font
+                    p
+                        label(for='startDate')
+                            | Event Start Date
+                            span *
+                        input#contactname.textflied(type='date', value='', required, ng-model='event.beginDate', name='beginDate', placeholder='Start Date')
+                        i.icon.fa.fa-calendar
+                    p
+                        label(for='endDate')
+                            | Event end Date
+                        input#contactname.textflied(type='date', value='', ng-model='event.endDate', name='endDate', placeholder='End Date')
+                        i.icon.fa.fa-calendar
+                    p
+                        label(for='eventSummary')
+                            | Summary
+                        textarea#contactname.texttextarea(type='text', value='', rows="8", name='eventSummary', placeholder='Event Summary', ng-model='event.summary')
+                        i.icon.fa.fa-pencil
+                    p
+                        label(for='eventLocation')
+                            | Event Location
+                            span *
+                        input#contactname.textflied(type='text', value='', required, ng-model='event.location', name='eventLocation', placeholder='Event Location')
+                        i.icon.fa.fa-globe
+                    p
+                        label(for='eventPictureUrl')
+                            | Event Picture Url
+                        input#contactname.textflied(type='url', value='', ng-model='event.imageUrl', name='eventPictureUrl', placeholder='Event Image Url')
+                        i.icon.fa.fa-picture-o
+                    p
+                        button#loginButton.btn.btn-pri(type='submit', name='eventButton', title='Create', ng-disabled="eventForm.$invalid") Save
