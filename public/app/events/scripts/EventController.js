@@ -6,11 +6,14 @@ angular.module('app').controller('EventController',["$scope","EventService","$lo
 function($scope,EventService, $location){
 
     $scope.event ={};
-
+    $scope.events =[];
     $scope.isProcessing = false;
     $scope.showErrorMessage = true;
 
-    $scope.events = EventService.getEvents();
+    EventService.getEvents().success(function(data, status, headers, config) {
+        $scope.events = data;
+    });
+    console.log($scope.events);
 
     $scope.createEvent = function(){
         EventService.createEvent($scope.event)
