@@ -423,23 +423,3 @@ if($("audio,video").length > 0){
 	    }
 	});
 }
-
-
-var count = 9,
-		flickrid = '83457042@N00';
-
-	$.getJSON("http://api.flickr.com/services/feeds/photos_public.gne?ids="+flickrid+"&lang=en-us&format=json&jsoncallback=?", function(data){
-		
-		window.a = (data);
-          $.each(data.items, function(index, item){
-          
-			  if(index < count){
-                $("<img />").attr("src", item.media.m).appendTo(".flickrwidget")
-                  .wrap("<a href='" + item.link + "'></a>");
-				 
-			  }
-			  else{
-				   return;
-				  }
-          });
-        });

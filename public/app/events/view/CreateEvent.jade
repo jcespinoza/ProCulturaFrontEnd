@@ -1,36 +1,92 @@
-style h1{color : #000000;text-align : center;font-family: "SIMPSON";}form {width: 300px;margin: 0 auto;}
-h1 Create an Event
-br
-br
-form( id="eventForm")
-    p Event Name:
-    input(type ="text")
-    br
-    br
-    p Event Start Date:
-    input(type="date" name="startDate")
-    br
-    br
-    p Event End Date:
-    input(type="date" name="endDate")
-    br
-    br
-    p Summary:
-    textarea(form="eventForm")
-    br
-    br
-    p Location:
-    input(type="text")
-    br
-    br
-    p Front Image:
-    input(type="file")
-    br
-    br
-    p Price:
-    input(type ="number")
-    br
-    br
-    input(type="submit")
-    br
-    br
+//
+   Created by Light on 27/08/2015.
+html
+    body
+        section.sub-banner.newsection
+            .container
+                h2.title Crear Evento
+        // Contact
+        .contact.newsection
+            .container
+                .row
+                    .col-md-6.col-sm-6
+                        form#contactform(name="CreateEvent", method='post', ng-submit='createEvent()')
+                            p
+                                label
+                                    | Nombre del Evento
+                                    span *
+                                input#contactname.textflied(type='text', ng-model='event.title', required)
+                                i.icon.fa.fa-user
+                            p
+                                label
+                                    | Asunto
+                                    span *
+                                input#subject.textflied(type='text', ng-model='event.subject', required)
+                                i.icon.fa.fa-edit
+                            p
+                                label
+                                    | Lugar
+                                    span *
+                                input#email.textflied(type='text', ng-model='event.location', required)
+                                i.icon.fa.fa-map-marker
+                            p
+                                label
+                                    | Precio
+                                    span *
+                                input#email.textflied(type='text', ng-model='event.price', pattern ='^[0-9]+[0-9]*$', required)
+                                i.icon.fa.fa-money
+                            p
+                                label
+                                    | Fecha de Inicio
+                                    span *
+                                i.icon.fa.fa-calendar
+                                input#contactname.textflied(type='datetime-local', ng-model='event.startDate', required)
+                            p
+                                label
+                                    | Fecha de Culminacion
+                                    span *
+                                input#contactname.textflied(type='datetime-local', name='event.endDate', required)
+                                i.icon.fa.fa-clock-o
+                            p
+                                label
+                                    | Descripcion
+                                    span *
+                                textarea#message.texttextarea(type='text', ng-model='event.description', placeholder='Descripcion del Evento', rows='8', required)
+                                i.icon.fa.fa-comments
+                            p
+                                button#submitButton.btn.btn-disabled(type='submit', title='Crear Evento') CREAR
+                    .col-md-6.col-sm-6
+                        // Map
+                        .map-container
+                            h2.title Localidad
+                            #contact-map.map
+                        // Contact Info
+                        .contactinfo
+                            h2.title Informacion del Organizador
+                            ul.clearfix
+                                li.clearfix
+                                    span.titles Direccion:
+                                    span.content
+                                        | 1600 Pennsylvania Ave NW, Washington, D.C., DC
+                                        br
+                                        |  20500, ABD
+                                li.clearfix
+                                    span.titles TEL :
+                                    span.content +90 555 55 55
+                                li.clearfix
+                                    span.titles CEL :
+                                    span.content +90 777 77 77
+                                li.clearfix
+                                    span.titles Email :
+                                    span.content
+                                        a(href='#') info@example.com
+                                li.clearfix
+                                    span.titles Staff :
+                                    span.content
+                                        a(href='#') support@example.com
+                            // Social Icon
+                            .social-icon
+                                a.facebook.fa.fa-facebook(href='#')
+                                a.twitter.fa.fa-twitter(href='#')
+                                a.googleplus.fa.fa-google-plus(href='#')
+                                a.linkedin.fa.fa-linkedin(href='#')

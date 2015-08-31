@@ -1,10 +1,6 @@
 section.sub-banner.newsection
     .container
         h2.title Login
-        ul.breadcrumb
-            li
-                a(href='#') Home
-            li Login
 
 // Modal Dialog
 .modal.fade(data-backdrop='static', data-keyboard='false', tabindex='-1', role='dialog', aria-hidden='true', style='padding-top:30%; overflow-y:visible;')
@@ -42,7 +38,7 @@ section.sub-banner.newsection
                     p
                         button#loginButton.btn.btn-pri(type='submit', name='login', title='Ingresar', ng-disabled="loginForm.$invalid") Ingresar
 
-                    .login-social-link.centered
+                    .login-social-link.centered(align="center")
                         p o ingresar mediante una red social
                         button.btn.btn-google
                             i.fa.fa-google-plus-square
@@ -50,8 +46,8 @@ section.sub-banner.newsection
                         button.btn.btn-linkedin
                             i.fa.fa-linkedin-square
                             |  LinkedIn
-                    .registration
+                    .registration(align="center")
                         | ¿No posee una cuenta?
                         br
-                        a(href='/signup')
+                        a.title(href='/signup')
                             | Registrarse

@@ -15,6 +15,7 @@ angular.module('app', ['ngRoute', 'ngResource','ngCookies']).config(function($ro
         .when('/Events', {templateUrl: 'partials/events/view/Events', controller: 'EventController'})
         .when('/CreateEvent', {templateUrl: 'partials/events/view/CreateEvent', controller: 'EventController'})
         .when('/event/:eventId', {templateUrl: 'partials/events/view/EventDetails', controller: 'EventDetailsController'})
+
 }).run(function($rootScope, $location){
     $rootScope.$on('$routeChangeError', function(event, current, previous, rejection){
         if(rejection === 'not authorized'){

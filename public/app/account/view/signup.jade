@@ -1,10 +1,6 @@
 section.sub-banner.newsection
     .container
         h2.title Registro
-        ul.breadcrumb
-            li
-                a(href='#') Home
-            li Registro
 
 // Modal Dialog
 .modal.fade(data-backdrop='static', data-keyboard='false', tabindex='-1', role='dialog', aria-hidden='true', style='padding-top:30%; overflow-y:visible;')
@@ -38,21 +34,21 @@ section.sub-banner.newsection
                         i.icon.fa.fa-envelope
                     p
                         label(for='password')
-                            | Password
+                            | Contraseña
                             span *
                         input#email.textflied(name='password', type='password', value='', ng-change="confirmPassword()", ng-model="user.password", ng-pattern="'^[a-zA-Z0-9]{8,}$'", required, title="8 Alphanumeric characters minimum", placeholder='Contraseña')
                         i.icon.fa.fa-lock
                     p
                         label(for='confirmPassword')
-                            | Password
+                            | Confirmar Contraseña
                             span *
                         input#email.textflied(name='confirmPassword', type='password', value='', ng-change="confirmPassword()", ng-model="user.confirmPassword", ng-pattern="'^[a-zA-Z0-9]{8,}$'", required, title="8 Alphanumeric characters minimum", placeholder='Confirmar Contraseña')
                         i.icon.fa.fa-lock
 
                     p(style="text-align: center; color: red", ng-show='showErrorMessage')
-                        | Los passwords no coinciden
+                        | Las contraseñas no coinciden
                     p(style="text-align: center; color: green", ng-show='!showErrorMessage')
-                        | Los passwords coinciden
+                        | Las contraseñas coinciden
 
                     p
                         button#signupButton.btn.btn-pri(type='submit', name='signup', title='Registrarse', ng-disabled="signupForm.$invalid") Registrar
