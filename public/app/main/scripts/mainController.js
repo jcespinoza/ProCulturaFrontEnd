@@ -1,7 +1,7 @@
 /**
  * Created by jcespinoza on 6/21/15.
  */
-angular.module("app").controller("MainController", function($scope){
+angular.module("app").controller("MainController", function($scope, EventService){
     $scope.showUpCommingEvents = true;
     $scope.showPopularEvents = false;
     $scope.showEvents = function(option){
