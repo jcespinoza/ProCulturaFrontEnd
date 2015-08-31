@@ -4,6 +4,9 @@
 
 angular.module('app').controller('EventController',["$scope",
     function($scope){
+
+            $scope.event ={};
+
             $scope.events = [{
                 eventId: 1,
                 title: "National Artists Concert",
@@ -43,6 +46,20 @@ angular.module('app').controller('EventController',["$scope",
 
 
             }];
+
+
+        $scope.createEvent = function(){
+            EventService.createEvent($scope.event)
+                .success(function(data, status, headers, config) {
+                    $scope.isProcessing = false;
+                    toastr.success(data.Message);
+                    $location.path('/login');
+                }).error(function(data, status, headers, config) {
+                    toastr.error(data);
+                    $scope.isProcessing = false;
+                    $scope.showErrorMessage = true;
+                });
+        };
 
 
     }]);
