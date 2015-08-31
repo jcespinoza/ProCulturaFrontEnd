@@ -6,71 +6,77 @@ html
       section.sub-banner.newsection
          .container
             h2.title Crear Evento
-            ul.breadcrumb
-               li
-                  a(href='#') Home
-               li Crear Evento
       // Contact
       .contact.newsection
          .container
             .row
                .col-md-6.col-sm-6
-                  h2.title Get in Touch with Us
                   form#contactform(method='post')
-                     .response  
                      p
                         label(for='contactname')
                            | Nombre del Evento
                            span *
-                        input#contactname.textflied(type='text', value='', name='contactname', placeholder='evento')
+                        input#contactname.textflied(type='text', value='', name='contactname')
                         i.icon.fa.fa-user
                      p
                         label(for='email')
                            | Lugar
                            span *
-                        input#email.textflied(type='text', value='', name='email', placeholder='Lugar')
-                        i.icon.fa.fa-envelope
+                        input#email.textflied(type='text', value='', name='email')
+                        i.icon.fa.fa-map-marker
                      p
                         label(for='subject')
-                           | Tema
+                           | Asunto
                            span *
-                        input#subject.textflied(type='text', value='', name='subject', placeholder='Su Tema')
+                        input#subject.textflied(type='text', value='', name='subject')
                         i.icon.fa.fa-edit
                      p
-                        label(for='message')
-                           | Descripción
+                        label(for='contactname')
+                           | Fecha
                            span *
-                        textarea#message.texttextarea(type='text', name='message', value='', placeholder='Descripción Aquí', rows='8')
+                        input#contactname.textflied(type='date', value='', name='contactname')
+                        i.icon.fa.fa-calendar
+                     p
+                        label(for='contactname')
+                           | Hora
+                           span *
+                        input#contactname.textflied(type='time', value='00:00', name='contactname')
+                        i.icon.fa.fa-clock-o
+                     p
+                        label(for='message')
+                           | Descripcion
+                           span *
+                        textarea#message.texttextarea(type='text', name='message', value='', placeholder='Descripcion del Evento', rows='8')
                         i.icon.fa.fa-comments
                      p
                         button#submitButton.btn.btn-disabled(type='submit', name='submit', title='Crear Evento') CREAR
                .col-md-6.col-sm-6
                   // Map
                   .map-container
-                     h2.title Location Map
+                     h2.title Localidad
                      #contact-map.map
                   // Contact Info
                   .contactinfo
-                     h2.title Contact Info
+                     h2.title Informacion del Organizador
                      ul.clearfix
                         li.clearfix
-                           span.titles Address :
+                           span.titles Direccion:
                            span.content
                               | 1600 Pennsylvania Ave NW, Washington, D.C., DC
                               br
                               |  20500, ABD
                         li.clearfix
-                           span.titles Phone :
+                           span.titles TEL :
                            span.content +90 555 55 55
                         li.clearfix
-                           span.titles Fax :
+                           span.titles CEL :
                            span.content +90 777 77 77
                         li.clearfix
-                           span.titles Email:
+                           span.titles Email :
                            span.content
                               a(href='#') info@example.com
                         li.clearfix
-                           span.titles Support:
+                           span.titles Staff :
                            span.content
                               a(href='#') support@example.com
                      // Social Icon

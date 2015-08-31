@@ -185,7 +185,10 @@ input:focus,textarea:focus{
 	margin-bottom:0px;
 }
 
-
+h2.title{
+	font-weight:900;
+	color: #0e76a8;
+}
 
 /*social-icon*/
 .header-top .social-icon {
@@ -1318,9 +1321,11 @@ input:focus,textarea:focus{
 	box-shadow: inset 0px 1px 1px #d7dfe4;
 }
 .sub-banner h2{
-	float:left;
-	font-weight:300;
+	float: none;
+	font-weight:700;
 	font-size:30px;
+    text-align: center;
+    color: #d58512;
 }
 
 
@@ -2081,7 +2086,7 @@ blockquote p{
 
 /*contact*/
 .contact .title{
-	font-weight:normal;
+	font-weight:700;
 	font-size:18px;
 	margin-bottom:25px;
 }
