@@ -4,7 +4,7 @@ div(style ="width:100%;height:100px;border:2px solid ;" ng-repeat="event in even
     img(ng-src="{{event.imgUrl}}" style="width:80px; height:90px;float:left; margin:3px")
     h1 {{event.title}}
     p Start Date: {{event.startDate}}
-    a(ng-href="http://localhost:8090/Events/{{event.Id}}" style="float:right;") Details
+    a(ng-href="http://localhost:8090/event/{{event.eventId}}" style="float:right;") Details
     p Location: {{event.location}}
     br
     br
