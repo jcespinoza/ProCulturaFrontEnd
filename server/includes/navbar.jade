@@ -8,13 +8,11 @@ block navbar-header
                     .col-md-6
                         ul.login-details.clearfix
                             li
-                                a.agenticon(href='/login') Agent Login
+                                a.agenticon(href='/login') | Login |
                             li
-                                a.customericon(href='/') Customer Login
+                                p.membericon No eres Miembro?
                             li
-                                p.membericon Not a Member?
-                            li
-                                a.pri-color(href='/signup') Register Now
+                                a( href='/signup') Registrate Ahora
                     .col-md-6
                         .social-icon.pull-right
                             a.facebook.fa.fa-facebook(href='https://www.facebook.com/pages/Pro-Cultura/265484150305339')
@@ -41,36 +39,18 @@ block navbar-header
                     // Nav
                     nav.main-nav.mobile-menu
                         ul.clearfix
-                            li.parent.active
+                            li.active
                                 a(href='/') Home
-                                // Sub memu
-                                ul.sub-menu
-                                    li.arrow
-                                    li
-                                        a(href='/') Home-1
                             li.parent
-                                a(href='#') Events
+                                a(href='#') Eventos
                                 // Sub memu
                                 ul.sub-menu
                                     li.arrow
                                     li
-                                        a(href='/') Event
-                                    li
-                                        a(href='/') Event-Sidebar-Left
-                                    li
-                                        a(href='/') Event-Sidebar-Right
-                                    li
-                                        a(href='/') Event Detail
+                                        a(href='/Event') Crear Evento
                             li
-                                a(href='#') Directions
+                                a(href='#') Unused
                             li
-                                a(href='/') Events TV
-                            li.parent
-                                a(href='/') Blog
-                                // Sub memu
-                                ul.sub-menu
-                                    li.arrow
-                                    li
-                                        a(href='/') Event Blog
-                                    li
-                                        a(href='/') Event Single-Blog
+                                a(href='/') Unused
+                            li
+                                a(href='/') Unused
