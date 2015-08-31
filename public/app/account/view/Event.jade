@@ -13,40 +13,40 @@ html
                .col-md-6.col-sm-6
                   form#contactform(method='post')
                      p
-                        label(for='contactname')
+                        label
                            | Nombre del Evento
                            span *
-                        input#contactname.textflied(type='text', value='', name='contactname')
+                        input#contactname.textflied(type='text', value='', ng-model='event.title')
                         i.icon.fa.fa-user
                      p
-                        label(for='email')
-                           | Lugar
-                           span *
-                        input#email.textflied(type='text', value='', name='email')
-                        i.icon.fa.fa-map-marker
-                     p
-                        label(for='subject')
+                        label
                            | Asunto
                            span *
-                        input#subject.textflied(type='text', value='', name='subject')
+                        input#subject.textflied(type='text', value='', ng-model='event.subject')
                         i.icon.fa.fa-edit
                      p
-                        label(for='contactname')
-                           | Fecha
+                        label
+                           | Lugar
                            span *
-                        input#contactname.textflied(type='date', value='', name='contactname')
-                        i.icon.fa.fa-calendar
+                        input#email.textflied(type='text', value='', ng-model='event.location')
+                        i.icon.fa.fa-map-marker
                      p
-                        label(for='contactname')
-                           | Hora
+                        label
+                           | Fecha de Inicio
                            span *
-                        input#contactname.textflied(type='time', value='00:00', name='contactname')
+                        i.icon.fa.fa-calendar
+                        input#contactname.textflied(type='datetime-local', ng-model='event.startDate')
+                     p
+                        label
+                           | Fecha de Culminacion
+                           span *
+                        input#contactname.textflied(type='datetime-local', name='event.endDate')
                         i.icon.fa.fa-clock-o
                      p
-                        label(for='message')
+                        label
                            | Descripcion
                            span *
-                        textarea#message.texttextarea(type='text', name='message', value='', placeholder='Descripcion del Evento', rows='8')
+                        textarea#message.texttextarea(type='text', ng-model='description', value='', placeholder='Descripcion del Evento', rows='8')
                         i.icon.fa.fa-comments
                      p
                         button#submitButton.btn.btn-disabled(type='submit', name='submit', title='Crear Evento') CREAR
