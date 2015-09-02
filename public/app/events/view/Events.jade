@@ -12,7 +12,7 @@ html
                 .eventform-con.clearfix
                     form
                         .form-input.search-location
-                            input(type='text', value='', placeholder='Seleccione Lugar')
+                            input(type='text', placeholder='Seleccione Lugar')
                             i.icon.icon-s.fa.fa-search
                             button.icon.fa.fa-globe
                         .form-input
@@ -56,7 +56,7 @@ html
                                             i.icon.fa.fa-twitch
                                             | {{event.Status}}
                                     p
-                                        | {{event.Summary}}
+                                        | {{event.ShortDescription}}
                                     a.btn.btn-pri(href='#') comprar
                                 .links.clearfix
                                     ul

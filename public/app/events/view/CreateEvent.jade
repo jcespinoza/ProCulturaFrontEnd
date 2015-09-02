@@ -15,43 +15,49 @@ html
                                 label
                                     | Nombre del Evento
                                     span *
-                                input#contactname.textflied(type='text', ng-model='event.title', required)
+                                input#contactname.textflied(type='text', ng-model='event.Name', required)
                                 i.icon.fa.fa-user
                             p
                                 label
                                     | Asunto
                                     span *
-                                input#subject.textflied(type='text', ng-model='event.subject', required)
+                                input#subject.textflied(type='text', ng-model='event.ShortDescription', required)
                                 i.icon.fa.fa-edit
                             p
                                 label
                                     | Lugar
                                     span *
-                                input#email.textflied(type='text', ng-model='event.location', required)
+                                input#email.textflied(type='text', ng-model='event.Location', required)
                                 i.icon.fa.fa-map-marker
                             p
                                 label
                                     | Precio
                                     span *
-                                input#email.textflied(type='text', ng-model='event.price', pattern ='^[0-9]+[0-9]*$', required)
+                                input#email.textflied(type='text', ng-model='event.Price', pattern ='^[0-9]+[0-9]*$', required)
                                 i.icon.fa.fa-money
+                            p
+                                label
+                                    | URL Imagen
+                                    span *
+                                input#email.textflied(type='text', ng-model='event.ImageUrl', required)
+                                i.icon.fa.fa-image
                             p
                                 label
                                     | Fecha de Inicio
                                     span *
                                 i.icon.fa.fa-calendar
-                                input#contactname.textflied(type='datetime-local', ng-model='event.startDate', required)
+                                input#contactname.textflied(type='date', ng-model='event.BeginDate', required)
                             p
                                 label
                                     | Fecha de Culminacion
                                     span *
-                                input#contactname.textflied(type='datetime-local', name='event.endDate', required)
+                                input#contactname.textflied(type='date', name='event.EndDate', required)
                                 i.icon.fa.fa-clock-o
                             p
                                 label
                                     | Descripcion
                                     span *
-                                textarea#message.texttextarea(type='text', ng-model='event.description', placeholder='Descripcion del Evento', rows='8', required)
+                                textarea#message.texttextarea(type='text', ng-model='event.LongDescription', placeholder='Descripcion del Evento', rows='8', required)
                                 i.icon.fa.fa-comments
                             p
                                 button#submitButton.btn.btn-disabled(type='submit', title='Crear Evento') CREAR
