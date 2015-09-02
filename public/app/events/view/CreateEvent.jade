@@ -1,60 +1,80 @@
 section.sub-banner.newsection
     .container
-        h2.title Create Event
-        ul.breadcrumb
-            li
-                a(href='/') Home
-            li Create Event
-// Modal Dialog
-.modal.fade(data-backdrop='static', data-keyboard='false', tabindex='-1', role='dialog', aria-hidden='true', style='padding-top:30%; overflow-y:visible;')
-.modal-dialog.modal-m(ng-show='isProcessing')
-    .modal-content
-        .modal-header
-            h3(style='margin:0;')
-        .modal-body
-            .progress.progress-striped.active(style='margin-bottom:0;')
-                .progress-bar(style='width: 100%')
-// End Modal dialog
-
+        h2.title Crear Evento
+// Contact
 .contact.newsection
     .container
         .row
-            .col-md-6.col-md-offset-3
-                h2.title Create a new Event
-                form#contactform(name="eventForm", method='post', ng-submit='createEvent()', ng-disabled='isProcessing')
-                    .response  
+            .col-md-6.col-sm-6
+                form#contactform(name="CreateEvent", method='post', ng-submit='createEvent()')
                     p
-                        label(for='eventName')
-                            | Event Name
+                        label
+                            | Nombre del Evento
                             span *
-                        input#contactname.textflied(type='text', value='', required, ng-model='event.name', name='eventName', placeholder='Event Name')
-                        i.icon.fa.fa-font
+                        input#contactname.textflied(type='text', ng-model='event.name', required)
+                        i.icon.fa.fa-user
                     p
-                        label(for='startDate')
-                            | Event Start Date
+                        label
+                            | Descripcion Corta
                             span *
-                        input#contactname.textflied(type='date', value='', required, ng-model='event.beginDate', name='beginDate', placeholder='Start Date')
+                        input#subject.textflied(type='text', ng-model='event.shortDescription', required)
+                        i.icon.fa.fa-edit
+                    p
+                        label
+                            | Lugar
+                            span *
+                        input#email.textflied(type='text', ng-model='event.location', required)
+                        i.icon.fa.fa-map-marker
+                    p
+                        label
+                            | Fecha de Inicio
+                            span *
                         i.icon.fa.fa-calendar
+                        input#contactname.textflied(type='datetime-local', ng-model='event.beginDate', required)
                     p
-                        label(for='endDate')
-                            | Event end Date
-                        input#contactname.textflied(type='date', value='', ng-model='event.endDate', name='endDate', placeholder='End Date')
-                        i.icon.fa.fa-calendar
+                        label
+                            | Fecha de Culminacion
+                        input#contactname.textflied(type='datetime-local', name='event.endDate')
+                        i.icon.fa.fa-clock-o
                     p
-                        label(for='eventSummary')
-                            | Summary
-                        textarea#contactname.texttextarea(type='text', value='', rows="8", name='eventSummary', placeholder='Event Summary', ng-model='event.summary')
-                        i.icon.fa.fa-pencil
+                        label
+                            | Descripcion Larga
+                        textarea#message.texttextarea(type='text', ng-model='event.longDescription', placeholder='Descripcion del Evento', rows='8')
+                        i.icon.fa.fa-comments
                     p
-                        label(for='eventLocation')
-                            | Event Location
-                            span *
-                        input#contactname.textflied(type='text', value='', required, ng-model='event.location', name='eventLocation', placeholder='Event Location')
-                        i.icon.fa.fa-globe
-                    p
-                        label(for='eventPictureUrl')
-                            | Event Picture Url
-                        input#contactname.textflied(type='url', value='', ng-model='event.imageUrl', name='eventPictureUrl', placeholder='Event Image Url')
-                        i.icon.fa.fa-picture-o
-                    p
-                        button#loginButton.btn.btn-pri(type='submit', name='eventButton', title='Create', ng-disabled="eventForm.$invalid") Save
+                        button#submitButton.btn.btn-disabled(type='submit', title='Crear Evento') CREAR EVENTO
+            .col-md-6.col-sm-6
+                // Map
+                .map-container
+                    h2.title Localidad
+                    #contact-map.map
+                // Contact Info
+                .contactinfo
+                    h2.title Informacion del Organizador
+                    ul.clearfix
+                        li.clearfix
+                            span.titles Direccion:
+                            span.content
+                                | 1600 Pennsylvania Ave NW, Washington, D.C., DC
+                                br
+                                |  20500, ABD
+                        li.clearfix
+                            span.titles TEL :
+                            span.content +90 555 55 55
+                        li.clearfix
+                            span.titles CEL :
+                            span.content +90 777 77 77
+                        li.clearfix
+                            span.titles Email :
+                            span.content
+                                a(href='#') info@example.com
+                        li.clearfix
+                            span.titles Staff :
+                            span.content
+                                a(href='#') support@example.com
+                    // Social Icon
+                    .social-icon
+                        a.facebook.fa.fa-facebook(href='#')
+                        a.twitter.fa.fa-twitter(href='#')
+                        a.googleplus.fa.fa-google-plus(href='#')
+                        a.linkedin.fa.fa-linkedin(href='#')
