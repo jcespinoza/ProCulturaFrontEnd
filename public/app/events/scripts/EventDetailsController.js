@@ -6,7 +6,9 @@ angular.module('app').controller('EventDetailsController',["$scope","EventServic
     function($scope,EventService, $routeParams){
 
 
-        $scope.event = EventService.getEvents()[$routeParams.eventId];
-
+        EventService.getEvent($routeParams.eventId)
+            .success(function(data, status, headers, config) {
+                $scope.event = data;
+            });
 
     }]);

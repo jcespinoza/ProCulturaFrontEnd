@@ -39,22 +39,22 @@ section.events.newsection
                 .event-border.col-md-3
                     .event.clearfix
                         .eventsimg
-                            img(src='{{event.imageUrl}}', alt='')
+                            img(src='{{event.ImageUrl}}', alt='')
                         .event-content
                             h3.title
-                                a(href='#') {{event.name}}
+                                a(href='/event/{{event.EventId}}') {{event.Name}}
                             ul.meta
                                 li.date
                                     i.icon.fa.fa-calendar
-                                    |  {{event.beginDate}}
+                                    |  {{event.BeginDate | date}}
                                 li
                                     i.icon.fa.fa-map-marker
-                                    | {{event.location}}
+                                    | {{event.Location}}
                                 li
                                     i.icon.fa.fa-twitch
-                                    | {{event.status}}
+                                    | {{event.Status}}
                             p
-                                | {{event.shortDescription}}
+                                | {{event.ShortDescription}}
                             a.btn.btn-pri(href='#') comprar
                         .links.clearfix
                             ul
