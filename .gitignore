@@ -82,6 +82,7 @@ node_modules
 public/vendor
 public/app/account/view/*.html
 public/app/main/view/*.html
+public/app/events/view/*.html
 server/views/*.html
 server/includes/*.html
 

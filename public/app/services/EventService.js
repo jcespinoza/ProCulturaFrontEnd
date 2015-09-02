@@ -1,21 +1,23 @@
+/**
+ * Created by JuanCarlos on 8/30/2015.
+ */
+
 angular.module('app').service('EventService', ['$http', 'HostFactory', function($http, HostFactory){
 
-
     var baseUrl = HostFactory.serverName ;
-    var eventFactory = {};
+    var eventService = {};
 
-    eventFactory.createEvent = function(event){
-        event.eventId = 4;
-        event.imgUrl = '';
-        events.push(event);
-        return $http.post(baseUrl + '/api/createEvent', event);
+    eventService.createEvent = function(event){
+        return $http.post(baseUrl + '/api/event', event);
     };
 
-    eventFactory.getEvents = function(){
-        return $http.get(HostFactory.serverName + '/api/Event');
-
+    eventService.getAllEvents = function(){
+        return $http.get(baseUrl + '/api/event');
     };
 
+    eventService.getEvent = function(id){
+        return $http.get(baseUrl + '/api/event/' + id);
+    };
 
-    return eventFactory;
+    return eventService;
 }]);
