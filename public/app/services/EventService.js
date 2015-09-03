@@ -15,5 +15,9 @@ angular.module('app').service('EventService', ['$http', 'HostFactory', function(
         return $http.get(baseUrl + '/api/event');
     };
 
+    eventService.getEvent = function(id){
+        return $http.get(baseUrl + '/api/event/' + id);
+    };
+
     return eventService;
 }]);
