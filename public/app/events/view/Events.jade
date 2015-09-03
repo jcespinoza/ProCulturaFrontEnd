@@ -1,92 +1,90 @@
-html
-    body
-        // Sub Banner
-        section.sub-banner.newsection
-            .container
-                h2.title Events
-        // Events
-        section.events.newsection
-            // Container
-            .container
-                // eventform-con
-                .eventform-con.clearfix
-                    form
-                        .form-input.search-location
-                            input(type='text', placeholder='Seleccione Lugar')
-                            i.icon.icon-s.fa.fa-search
-                            button.icon.fa.fa-globe
-                        .form-input
-                            input.date_timepicker_start(type='date', placeholder='mm/dd/yy')
-                            button.open.icon.fa.fa-calendar(type='button', value='open')
-                        .form-input
-                            input.date_timepicker_end(placeholder='dd/mm/yy')
-                            button.end.icon.fa.fa-calendar(type='button', value='open')
-                        .form-input
-                            .styled-select
-                                select
-                                    option Seleccione Campos
-                                    option 2da opcion
-                        .form-input
-                            button.btn.btn-disabled FILTRAR evento
-                    // Event-Filter-Memu
-                    ul.event-filter
-                        li.filter.stylelist
-                            i.fa.fa-th-list
-                        li.filter.stylegrid
-                            i.fa.fa-th
-                // Item Grid & Item List
-                .grid-list.event-container.clearfix.checkcolumn
-                    div(ng-repeat="event in events")
-                        // Event
-                        .event-border.col-md-3
-                            .event.clearfix
-                                .eventsimg
-                                    img(src='{{event.ImageUrl}}', alt='')
-                                .event-content
-                                    h3.title
-                                        a(href='#') {{event.Name}}
-                                    ul.meta
-                                        li.date
-                                            i.icon.fa.fa-calendar
-                                            |  {{event.BeginDate}}
-                                        li
-                                            i.icon.fa.fa-map-marker
-                                            | {{event.Location}}
-                                        li
-                                            i.icon.fa.fa-twitch
-                                            | {{event.Status}}
-                                    p
-                                        | {{event.ShortDescription}}
-                                    a.btn.btn-pri(href='#') comprar
-                                .links.clearfix
-                                    ul
-                                        li
-                                            a.st_sharethis_large(displaytext='ShareThis')
-                                                i.icon.fa.fa-share
-                                                |  share
-                                        li
-                                            a(href='#')
-                                                i.icon.fa.fa-heart
-                                                | 26
-                                        li
-                                            a(href='#')
-                                                i.icon.fa.fa-comment
-                                                | 33
-                // Pagination
-                ul.pagination.clearfix
-                    li
-                        a(href='#')
-                            i.fa.fa-angle-left
-                    li
-                        a(href='#') 1
-                    li
-                        a(href='#') 2
-                    li
-                        a(href='#') 3
-                    li
-                        a(href='#') 4
-                    li
-                        a(href='#') 5
-                    li
-                        a(href='#')
-                            i.fa.fa-angle-right
+// Sub Banner
+section.sub-banner.newsection
+    .container
+        h2.title Events
+// Events
+section.events.newsection
+    // Container
+    .container
+        // eventform-con
+        .eventform-con.clearfix
+            form
+                .form-input.search-location
+                    input(type='text', placeholder='Seleccione Lugar')
+                    i.icon.icon-s.fa.fa-search
+                    button.icon.fa.fa-globe
+                .form-input
+                    input.date_timepicker_start(type='date', placeholder='mm/dd/yy')
+                    button.open.icon.fa.fa-calendar(type='button', value='open')
+                .form-input
+                    input.date_timepicker_end(placeholder='dd/mm/yy')
+                    button.end.icon.fa.fa-calendar(type='button', value='open')
+                .form-input
+                    .styled-select
+                        select
+                            option Seleccione Campos
+                            option 2da opcion
+                .form-input
+                    button.btn.btn-disabled FILTRAR evento
+            // Event-Filter-Memu
+            ul.event-filter
+                li.filter.stylelist
+                    i.fa.fa-th-list
+                li.filter.stylegrid
+                    i.fa.fa-th
+        // Item Grid & Item List
+        .grid-list.event-container.clearfix.checkcolumn
+            div(ng-repeat="event in events")
+                // Event
+                .event-border.col-md-3
+                    .event.clearfix
+                        .eventsimg
+                            img(src='{{event.ImageUrl}}', alt='')
+                        .event-content
+                            h3.title
+                                a(href='/') {{event.Name}}
+                            ul.meta
+                                li.date
+                                    i.icon.fa.fa-calendar
+                                    |  {{event.BeginDate}}
+                                li
+                                    i.icon.fa.fa-map-marker
+                                    | {{event.Location}}
+                                li
+                                    i.icon.fa.fa-twitch
+                                    | {{event.Status}}
+                            p
+                                | {{event.ShortDescription}}
+                            a.btn.btn-pri(href='/') comprar
+                        .links.clearfix
+                            ul
+                                li
+                                    a.st_sharethis_large(displaytext='ShareThis')
+                                        i.icon.fa.fa-share
+                                        |  share
+                                li
+                                    a(href='/')
+                                        i.icon.fa.fa-heart
+                                        | 26
+                                li
+                                    a(href='/')
+                                        i.icon.fa.fa-comment
+                                        | 33
+        // Pagination
+        ul.pagination.clearfix
+            li
+                a(href='#')
+                    i.fa.fa-angle-left
+            li
+                a(href='#') 1
+            li
+                a(href='#') 2
+            li
+                a(href='#') 3
+            li
+                a(href='#') 4
+            li
+                a(href='#') 5
+            li
+                a(href='#')
+                    i.fa.fa-angle-right
