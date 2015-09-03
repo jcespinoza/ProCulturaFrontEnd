@@ -9,9 +9,11 @@ angular.module('app', ['ngRoute', 'ngResource','ngCookies']).config(function($ro
     });
 
     $routeProvider
-        .when('/', {templateUrl: 'partials/main/view/main', controller: 'mainController'})
+        .when('/', {templateUrl: 'partials/main/view/main', controller: 'MainController'})
         .when('/login',  {templateUrl: 'partials/account/view/login', controller: 'LoginController'})
         .when('/signup', {templateUrl: 'partials/account/view/signup', controller: 'SignUpController'})
+        .when('/events', {templateUrl: 'partials/events/view/events', controller: 'EventController'})
+        .when('/createEvent', {templateUrl: 'partials/events/view/createEvent', controller: 'EventController'})
 }).run(function($rootScope, $location){
     $rootScope.$on('$routeChangeError', function(event, current, previous, rejection){
         if(rejection === 'not authorized'){
