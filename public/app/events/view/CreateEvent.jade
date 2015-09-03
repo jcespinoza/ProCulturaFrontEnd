@@ -1,99 +1,97 @@
 //
-   Created by Light on 27/08/2015.
-html
-    body
-        section.sub-banner.newsection
-            .container
-                h2.title Crear Evento
-        // Contact
-        .contact.newsection
-            .container
-                .row
-                    .col-md-6.col-sm-6
-                        form#contactform(name="CreateEvent", method='post', ng-submit='createEvent()')
-                            p
-                                div.tooltip-bottom(data-tooltip='Ej. Obra Teatral: Helen Keller ')
-                                    label
-                                        | Nombre del Evento
-                                        span *
-                                    input.textflied(type='text', ng-model='event.Name', required)
-                                    i.icon.fa.fa-user
-                            p
-                                div.tooltip-bottom(data-tooltip='Ej. Obra Teatral: Helen Keller ')
-                                    label
-                                        | Asunto
-                                        span *
-                                    input.textflied(type='text', ng-model='event.ShortDescription', required)
-                                    i.icon.fa.fa-edit
-                            p
-                                div.tooltip-bottom(data-tooltip='Ej. Obra Teatral: Helen Keller ')
-                                    label
-                                        | Lugar
-                                        span *
-                                    input.textflied(type='text', ng-model='event.Location', required)
-                                    i.icon.fa.fa-map-marker
-                            p
-                                div.tooltip-bottom(data-tooltip='Ej. Obra Teatral: Helen Keller ')
-                                    label
-                                        | URL Imagen
-                                        span *
-                                    input.textflied(type='text', ng-model='event.ImageUrl', required)
-                                    i.icon.fa.fa-image
-                            p
-                                div.tooltip-bottom(data-tooltip='Ej. Obra Teatral: Helen Keller ')
-                                    label
-                                        | Fecha de Inicio
-                                        span *
-                                    i.icon.fa.fa-calendar
-                                    input.textflied(type='date', ng-model='event.BeginDate', required)
-                            p
-                                div.tooltip-bottom(data-tooltip='Ej. Obra Teatral: Helen Keller ')
-                                    label
-                                        | Fecha de Culminacion
-                                        span *
-                                    input.textflied(type='date', name='event.EndDate', required)
-                                    i.icon.fa.fa-clock-o
-                            p
-                                div.tooltip-bottom(data-tooltip='Ej. Obra Teatral: Helen Keller ')
-                                    label
-                                        | Descripcion
-                                        span *
-                                    textarea.texttextarea(type='text', ng-model='event.LongDescription', placeholder='Descripcion del Evento', rows='8', required)
-                                    i.icon.fa.fa-comments
-                            p
-                                button#submitButton.btn.btn-disabled(type='submit', title='Crear Evento') CREAR
-                    .col-md-6.col-sm-6
-                        // Map
-                        .map-container
-                            h2.title Localidad
-                            #contact-map.map
-                        // Contact Info
-                        .contactinfo
-                            h2.title Informacion del Organizador
-                            ul.clearfix
-                                li.clearfix
-                                    span.titles Direccion:
-                                    span.content
-                                        | 1600 Pennsylvania Ave NW, Washington, D.C., DC
-                                        br
-                                        |  20500, ABD
-                                li.clearfix
-                                    span.titles TEL :
-                                    span.content +90 555 55 55
-                                li.clearfix
-                                    span.titles CEL :
-                                    span.content +90 777 77 77
-                                li.clearfix
-                                    span.titles Email :
-                                    span.content
-                                        a(href='#') info@example.com
-                                li.clearfix
-                                    span.titles Staff :
-                                    span.content
-                                        a(href='#') support@example.com
-                            // Social Icon
-                            .social-icon
-                                a.facebook.fa.fa-facebook(href='#')
-                                a.twitter.fa.fa-twitter(href='#')
-                                a.googleplus.fa.fa-google-plus(href='#')
-                                a.linkedin.fa.fa-linkedin(href='#')
+   Created by Mario on 27/08/2015.
+// MARIO. STOP ADDING THE HTML AND BODY TAGS. WE DON'T FREAKING WANT THEM HERE
+
+section.sub-banner.newsection
+    .container
+        h2.title Crear Evento
+// Contact
+.contact.newsection
+    .container
+        .row
+            .col-md-6.col-sm-6
+                form#contactform(name="CreateEvent", method='post', ng-submit='createEvent()')
+                    p
+                        div.tooltip-bottom(data-tooltip='Ej. Obra Teatral: Helen Keller ')
+                            label
+                                | Nombre del Evento
+                                span *
+                            input.textflied(type='text', ng-model='event.Name', required)
+                            i.icon.fa.fa-user
+                    p
+                        div.tooltip-bottom(data-tooltip='Ej. Obra Teatral: Helen Keller ')
+                            label
+                                | Descripcion Corta
+                                span *
+                            input.textflied(type='text', ng-model='event.ShortDescription', required)
+                            i.icon.fa.fa-edit
+                    p
+                        div.tooltip-bottom(data-tooltip='Ej. Obra Teatral: Helen Keller ')
+                            label
+                                | Lugar
+                                span *
+                            input.textflied(type='text', ng-model='event.Location', required)
+                            i.icon.fa.fa-map-marker
+                    p
+                        div.tooltip-bottom(data-tooltip='Ej. Obra Teatral: Helen Keller ')
+                            label
+                                | URL Imagen
+                            input.textflied(type='text', ng-model='event.ImageUrl')
+                            i.icon.fa.fa-image
+                    p
+                        div.tooltip-bottom(data-tooltip='Ej. Obra Teatral: Helen Keller ')
+                            label
+                                | Fecha de Inicio
+                                span *
+                            i.icon.fa.fa-calendar
+                            input.textflied(type='date', ng-model='event.BeginDate', required)
+                    p
+                        div.tooltip-bottom(data-tooltip='Ej. Obra Teatral: Helen Keller ')
+                            label
+                                | Fecha de Culminacion
+                            input.textflied(type='date', name='event.EndDate')
+                            i.icon.fa.fa-clock-o
+                    p
+                        div.tooltip-bottom(data-tooltip='Ej. Obra Teatral: Helen Keller ')
+                            label
+                                | Descripcion
+                                span *
+                            textarea.texttextarea(type='text', ng-model='event.LongDescription', placeholder='Descripcion del Evento', rows='8')
+                            i.icon.fa.fa-comments
+                    p
+                        button#submitButton.btn.btn-disabled(type='submit', title='Crear Evento') CREAR
+            .col-md-6.col-sm-6
+                // Map
+                .map-container
+                    h2.title Localidad
+                    #contact-map.map
+                // Contact Info
+                .contactinfo
+                    h2.title Informacion del Organizador
+                    ul.clearfix
+                        li.clearfix
+                            span.titles Direccion:
+                            span.content
+                                | 1600 Pennsylvania Ave NW, Washington, D.C., DC
+                                br
+                                |  20500, ABD
+                        li.clearfix
+                            span.titles TEL :
+                            span.content +90 555 55 55
+                        li.clearfix
+                            span.titles CEL :
+                            span.content +90 777 77 77
+                        li.clearfix
+                            span.titles Email :
+                            span.content
+                                a(href='#') info@example.com
+                        li.clearfix
+                            span.titles Staff :
+                            span.content
+                                a(href='#') support@example.com
+                    // Social Icon
+                    .social-icon
+                        a.facebook.fa.fa-facebook(href='#')
+                        a.twitter.fa.fa-twitter(href='#')
+                        a.googleplus.fa.fa-google-plus(href='#')
+                        a.linkedin.fa.fa-linkedin(href='#')
