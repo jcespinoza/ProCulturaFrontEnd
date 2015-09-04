@@ -1964,12 +1964,18 @@ blockquote p{
 	border-bottom: 1px solid #c2c4cb;
 }
 
-
-
 .textflied{
 	width:100%;
 	height:40px;
 	padding:0px 10px;
+	border:1px solid #c2c4cb;
+	border-radius:2px;
+	outline:none;
+}
+
+.textfliedCalendar{
+	height:40px;
+	padding-left: 30px;
 	border:1px solid #c2c4cb;
 	border-radius:2px;
 	outline:none;
@@ -2115,7 +2121,12 @@ blockquote p{
 	color: dodgerblue;
 }
 
-
+.iconCalendar{
+	position:absolute;
+	top: 40px;
+	left: 10px;
+	color: dodgerblue;
+}
 
 .contact .map{
 	border:4px solid #ccc;
@@ -4060,7 +4071,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2b3c4e', end
     z-index: 1000;
     padding: 8px;
     width: 160px;
-    background-color: #000;
+    background-color: black;
     background-color: hsla(0, 0%, 20%, 0.9);
     color: #fff;
     content: attr(data-tooltip);
@@ -4152,7 +4163,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2b3c4e', end
     margin-top: -12px;
     margin-bottom: 0;
     border-top-color: transparent;
-    border-bottom-color: #000;
+    border-bottom-color: black;
     border-bottom-color: hsla(0, 0%, 20%, 0.9);
 }
 

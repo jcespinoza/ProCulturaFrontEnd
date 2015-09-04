@@ -38,28 +38,48 @@ html
                                         | URL Imagen
                                         span *
                                     input.textflied(type='text', ng-model='event.ImageUrl', required)
-                                    i.icon.fa.fa-image
-                            p
+                                    i.icon.fa.fa-image(style="color: brown")
+                            div.row
+                                label
+                                    | Fecha de Inicio
+                                    span *
+                                label
+                                    | Fecha de Inicio
+                                    span *
+                            div.row
                                 div.tooltip-bottom(data-tooltip='Ej. Obra Teatral: Helen Keller ')
+                                    input.textfliedCalendar(type='date', ng-model='event.BeginDate', required)
+                                div.tooltip-bottom(data-tooltip='Ej. Obra Teatral: Helen Keller ')
+                                    input.textfliedCalendar(type='date', ng-model='event.BeginDate', required)
+                                //div.tooltip-bottom(data-tooltip='Ej. Obra Teatral: Helen Keller ')
                                     label
                                         | Fecha de Inicio
                                         span *
-                                    i.icon.fa.fa-calendar
-                                    input.textflied(type='date', ng-model='event.BeginDate', required)
+                                    br
+                                    input.textfliedCalendar(type='date', ng-model='event.BeginDate', required)
+                                    i.iconCalendar.fa.fa-calendar(style="color: green")
+                                //div.tooltip-bottom(data-tooltip='Ej. Obra Teatral: Helen Keller ')
+                                    label
+                                        | Fecha de Inicio
+                                        span *
+                                    br
+                                    input.textfliedCalendar(type='date', ng-model='event.BeginDate', required)
+                                    i.iconCalendar.fa.fa-calendar(style="color: green")
                             p
                                 div.tooltip-bottom(data-tooltip='Ej. Obra Teatral: Helen Keller ')
                                     label
                                         | Fecha de Culminacion
                                         span *
-                                    input.textflied(type='date', name='event.EndDate', required)
-                                    i.icon.fa.fa-clock-o
+                                    br
+                                    input.textfliedCalendar(type='date', name='event.EndDate', required)
+                                    i.iconCalendar.fa.fa-calendar(style="color: green")
                             p
                                 div.tooltip-bottom(data-tooltip='Ej. Obra Teatral: Helen Keller ')
                                     label
                                         | Descripcion
                                         span *
                                     textarea.texttextarea(type='text', ng-model='event.LongDescription', placeholder='Descripcion del Evento', rows='8', required)
-                                    i.icon.fa.fa-comments
+                                    i.icon.fa.fa-comments(style="color: orange")
                             p
                                 button#submitButton.btn.btn-disabled(type='submit', title='Crear Evento') CREAR
                     .col-md-6.col-sm-6
