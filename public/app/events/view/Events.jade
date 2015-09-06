@@ -42,11 +42,11 @@ section.events.newsection
                             img(src='{{event.ImageUrl}}', alt='')
                         .event-content
                             h3.title
-                                a(href='/') {{event.Name}}
+                                a(href='/EventsDetails') {{event.Name}}
                             ul.meta
                                 li.date
                                     i.icon.fa.fa-calendar
-                                    |  {{event.BeginDate}}
+                                    |  {{event.BeginDate | date}}
                                 li
                                     i.icon.fa.fa-map-marker
                                     | {{event.Location}}
