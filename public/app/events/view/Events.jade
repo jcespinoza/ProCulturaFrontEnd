@@ -38,24 +38,29 @@ section.events.newsection
                 // Event
                 .event-border.col-md-3
                     .event.clearfix
-                        .eventsimg
+                        .eventsimg(ng-if="!event.ImageUrl")
+                            img(src='http://wiki.solid-run.com/images/7/75/No_image_available.png', alt='')
+                        .eventsimg(ng-if="event.ImageUrl")
                             img(src='{{event.ImageUrl}}', alt='')
-                        .event-content
-                            h3.title
+                        .event-content(align="left")
+                            h3.title(align="center")
                                 a(href='/event/{{event.EventId}}') {{event.Name}}
                             ul.meta
                                 li.date
                                     i.icon.fa.fa-calendar(style="color: brown")
                                     |  {{event.BeginDate | date}}
+                                br
                                 li
                                     i.icon.fa.fa-map-marker(style="color: red")
                                     | {{event.Location}}
+                                br
                                 li
                                     i.icon.fa.fa-twitch(style="color: green")
                                     | {{event.Status}}
-                            p
+                            p(align="center", style="font-weight: bold; font-size: 13px")
                                 | {{event.ShortDescription}}
-                            a.btn.btn-pri(href='/') comprar
+                            .div(align="center")
+                                a.btn.btn-pri(href='/') comprar
                         .links.clearfix
                             ul
                                 li
