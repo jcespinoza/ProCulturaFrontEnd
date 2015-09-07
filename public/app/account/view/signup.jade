@@ -22,22 +22,25 @@ section.sub-banner.newsection
                     .response
                     p
                         label(for='name')
-                            | Name
+                            | Nombre
                             span *
                         input#contactname.textflied(type='text', ng-model='user.name', name='name', placeholder='Nombre')
                         i.icon-abs.fa.fa-user
+
                     p
                         label(for='username')
-                            | Usuario o Email
+                            | Usuario o Correo Electronico
                             span *
-                        input#contactname.textflied(type='text', ng-model='user.email', name='username', placeholder='Usuario')
+                        input#contactname.textflied(type='text', ng-model='user.email', name='username', placeholder='Correo Electronico')
                         i.icon-abs.fa.fa-envelope
+
                     p
                         label(for='password')
                             | Contraseña
                             span *
                         input#email.textflied(name='password', type='password', ng-change="confirmPassword()", ng-model="user.password", ng-pattern="'^[a-zA-Z0-9]{8,}$'", required, title="8 Alphanumeric characters minimum", placeholder='Contraseña')
                         i.icon-abs.fa.fa-lock
+
                     p
                         label(for='confirmPassword')
                             | Confirmar Contraseña
