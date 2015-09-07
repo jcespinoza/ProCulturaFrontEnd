@@ -159,6 +159,20 @@ ul,ol{
 	margin:0px;
 }
 
+p.LongDescription{
+    font-weight: bold;
+    font-size: 20px;
+    font-family: sans-serif;
+    text-indent: 20px;
+}
+
+h3.SubjectTitle{
+    font-weight: bold;
+    font-size: 30px;
+    color: #337ab7;
+    padding-bottom: 10px;
+}
+
 a:hover{
 	text-decoration:none;
 	color:#2f383d;
@@ -1310,9 +1324,6 @@ h2.title{
 	border:1px solid;
 }
 
-
-
-
 /*SUB-BANNER*/
 .sub-banner{
 	background:#e9f2f7;
@@ -1708,12 +1719,12 @@ h2.title{
 }
 
 
-/*ticket-resgister*/
-.ticket-resgister {
+/*ticket-register*/
+.ticket-register {
 	text-align:center;
 }
 
-.ticket-resgister .title{
+.ticket-register .title{
 	font-size:30px;
 	font-weight:300;
 	margin-bottom:25px;	
@@ -1721,12 +1732,12 @@ h2.title{
 }
 
 
-.ticket-resgister .ticket{
+.ticket-register .ticket{
 	background:#e9f2f7;
 	padding:20px 0;
 
 }
-.ticket-resgister .ticket .title{
+.ticket-register .ticket .title{
 	font-size:24px;
 	font-weight:bold;
 	margin:0 auto 15px;
@@ -1777,7 +1788,7 @@ h2.title{
 }
 
 
-.ticket-resgister h3{
+.ticket-register h3{
 	font-size:24px;
 	font-weight:bold;
 	text-transform:uppercase;
@@ -1785,14 +1796,14 @@ h2.title{
 	margin-bottom:15px;
 }
 
-.ticket-resgister li{
+.ticket-register li{
 	list-style:none;
 	margin-bottom:10px;
 	padding:0px 10px 10px 10px;
 	border-bottom:1px solid #eaeaea;
 }
 
-.ticket-resgister .ticket .btn{
+.ticket-register .ticket .btn{
 	float:none;
 	font-size:16px;
 	font-weight:bold;
@@ -1805,7 +1816,7 @@ h2.title{
 	margin-right:8px;
 }
 
-.ticket-resgister .btn-lg{
+.ticket-register .btn-lg{
 	margin:60px auto 0;
 	font-size: 18px;
 	border-radius: 3px;
@@ -2123,7 +2134,6 @@ blockquote p{
 
 .icon{
 	position: relative;
-	right: 5px;
 	color: dodgerblue;
 }
 
@@ -2920,7 +2930,7 @@ a,.login-details .pri-color,.login-details  a:hover,.main-nav a:hover,.event .li
 }
 
 /*background*/
-.btn-pri,#aside .testimonials .testimonials-content,.ticket-resgister .btn-pri,.both-btn .find-events a,.bx-wrapper .bx-controls-direction a:hover{
+.btn-pri,#aside .testimonials .testimonials-content,.ticket-register .btn-pri,.both-btn .find-events a,.bx-wrapper .bx-controls-direction a:hover{
 	background:#5ab4e6;
 }
 
@@ -3335,16 +3345,16 @@ RE-SIZE
 		width:240px !important;
 	}
 
-	.ticket-resgister .col-md-4{
+	.ticket-register .col-md-4{
 		width:100%;
 		margin-bottom:25px;
 	}
 
-	.ticket-resgister .col-md-4:last-child{
+	.ticket-register .col-md-4:last-child{
 		margin-bottom:0px;
 	}
 
-	.ticket-resgister .btn-lg{
+	.ticket-register .btn-lg{
 		margin-top:40px;
 	}
 

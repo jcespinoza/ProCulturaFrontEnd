@@ -1,7 +1,7 @@
 // Sub Banner
 section.sub-banner.newsection
     .container
-        h2.title Events
+        h2.title Eventos
 // Events
 section.events.newsection
     // Container
@@ -42,16 +42,16 @@ section.events.newsection
                             img(src='{{event.ImageUrl}}', alt='')
                         .event-content
                             h3.title
-                                a(href='/EventsDetails') {{event.Name}}
+                                a(href='/event/{{event.EventId}}') {{event.Name}}
                             ul.meta
                                 li.date
-                                    i.icon.fa.fa-calendar
+                                    i.icon.fa.fa-calendar(style="color: brown")
                                     |  {{event.BeginDate | date}}
                                 li
-                                    i.icon.fa.fa-map-marker
+                                    i.icon.fa.fa-map-marker(style="color: red")
                                     | {{event.Location}}
                                 li
-                                    i.icon.fa.fa-twitch
+                                    i.icon.fa.fa-twitch(style="color: green")
                                     | {{event.Status}}
                             p
                                 | {{event.ShortDescription}}
@@ -60,16 +60,17 @@ section.events.newsection
                             ul
                                 li
                                     a.st_sharethis_large(displaytext='ShareThis')
-                                        i.icon.fa.fa-share
+                                        i.icon.fa.fa-share(style="color: blue")
                                         |  share
                                 li
                                     a(href='/')
-                                        i.icon.fa.fa-heart
+                                        i.icon.fa.fa-heart(style="color: pink")
                                         | 26
                                 li
                                     a(href='/')
                                         i.icon.fa.fa-comment
                                         | 33
+        hr
         // Pagination
         ul.pagination.clearfix
             li
