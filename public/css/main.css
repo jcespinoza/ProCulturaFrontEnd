@@ -2114,14 +2114,26 @@ blockquote p{
 	outline:none;
 }
 
-.icon{
+.icon-abs{
 	position:absolute;
 	top: 40px;
 	right: 10px;
 	color: dodgerblue;
 }
 
-.iconCalendar{
+.icon{
+	position: relative;
+	right: 5px;
+	color: dodgerblue;
+}
+
+.icon-footer{
+    position: relative;
+    padding-right: 10px;
+    color: lightgray;
+}
+
+.icon-calendar{
 	position:absolute;
 	top: 40px;
 	left: 10px;
