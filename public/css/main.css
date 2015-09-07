@@ -159,6 +159,20 @@ ul,ol{
 	margin:0px;
 }
 
+p.LongDescription{
+    font-weight: bold;
+    font-size: 20px;
+    font-family: sans-serif;
+    text-indent: 20px;
+}
+
+h3.SubjectTitle{
+    font-weight: bold;
+    font-size: 30px;
+    color: #337ab7;
+    padding-bottom: 10px;
+}
+
 a:hover{
 	text-decoration:none;
 	color:#2f383d;
@@ -890,8 +904,8 @@ h2.title{
 }
 
 .eventsimg img{
-	max-width:100%;
-	width: 100%;
+	width: 330px;
+	height: 194px;
 }
 
 .events .eventform-con{
@@ -1310,9 +1324,6 @@ h2.title{
 	border:1px solid;
 }
 
-
-
-
 /*SUB-BANNER*/
 .sub-banner{
 	background:#e9f2f7;
@@ -1708,12 +1719,12 @@ h2.title{
 }
 
 
-/*ticket-resgister*/
-.ticket-resgister {
+/*ticket-register*/
+.ticket-register {
 	text-align:center;
 }
 
-.ticket-resgister .title{
+.ticket-register .title{
 	font-size:30px;
 	font-weight:300;
 	margin-bottom:25px;	
@@ -1721,12 +1732,12 @@ h2.title{
 }
 
 
-.ticket-resgister .ticket{
+.ticket-register .ticket{
 	background:#e9f2f7;
 	padding:20px 0;
 
 }
-.ticket-resgister .ticket .title{
+.ticket-register .ticket .title{
 	font-size:24px;
 	font-weight:bold;
 	margin:0 auto 15px;
@@ -1777,7 +1788,7 @@ h2.title{
 }
 
 
-.ticket-resgister h3{
+.ticket-register h3{
 	font-size:24px;
 	font-weight:bold;
 	text-transform:uppercase;
@@ -1785,14 +1796,14 @@ h2.title{
 	margin-bottom:15px;
 }
 
-.ticket-resgister li{
+.ticket-register li{
 	list-style:none;
 	margin-bottom:10px;
 	padding:0px 10px 10px 10px;
 	border-bottom:1px solid #eaeaea;
 }
 
-.ticket-resgister .ticket .btn{
+.ticket-register .ticket .btn{
 	float:none;
 	font-size:16px;
 	font-weight:bold;
@@ -1805,7 +1816,7 @@ h2.title{
 	margin-right:8px;
 }
 
-.ticket-resgister .btn-lg{
+.ticket-register .btn-lg{
 	margin:60px auto 0;
 	font-size: 18px;
 	border-radius: 3px;
@@ -2114,14 +2125,25 @@ blockquote p{
 	outline:none;
 }
 
-.icon{
+.icon-abs{
 	position:absolute;
 	top: 40px;
 	right: 10px;
 	color: dodgerblue;
 }
 
-.iconCalendar{
+.icon{
+	position: relative;
+	color: dodgerblue;
+}
+
+.icon-footer{
+    position: relative;
+    padding-right: 10px;
+    color: lightgray;
+}
+
+.icon-calendar{
 	position:absolute;
 	top: 40px;
 	left: 10px;
@@ -2908,7 +2930,7 @@ a,.login-details .pri-color,.login-details  a:hover,.main-nav a:hover,.event .li
 }
 
 /*background*/
-.btn-pri,#aside .testimonials .testimonials-content,.ticket-resgister .btn-pri,.both-btn .find-events a,.bx-wrapper .bx-controls-direction a:hover{
+.btn-pri,#aside .testimonials .testimonials-content,.ticket-register .btn-pri,.both-btn .find-events a,.bx-wrapper .bx-controls-direction a:hover{
 	background:#5ab4e6;
 }
 
@@ -3323,16 +3345,16 @@ RE-SIZE
 		width:240px !important;
 	}
 
-	.ticket-resgister .col-md-4{
+	.ticket-register .col-md-4{
 		width:100%;
 		margin-bottom:25px;
 	}
 
-	.ticket-resgister .col-md-4:last-child{
+	.ticket-register .col-md-4:last-child{
 		margin-bottom:0px;
 	}
 
-	.ticket-resgister .btn-lg{
+	.ticket-register .btn-lg{
 		margin-top:40px;
 	}
 
@@ -4070,7 +4092,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2b3c4e', end
 [data-tooltip]:after {
     z-index: 1000;
     padding: 8px;
-    width: 160px;
+    width: 300px;
     background-color: black;
     background-color: hsla(0, 0%, 20%, 0.9);
     color: #fff;
@@ -4097,7 +4119,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2b3c4e', end
 .tooltip-top:before {
     margin-left: -6px;
     margin-bottom: -12px;
-    border-top-color: #000;
+    border-top-color: black;
     border-top-color: hsla(0, 0%, 20%, 0.9);
 }
 
@@ -4156,7 +4178,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2b3c4e', end
 .tooltip-bottom:after {
     top: 100%;
     bottom: auto;
-    left: 50%;
+    left: 30%;
 }
 
 .tooltip-bottom:before {
