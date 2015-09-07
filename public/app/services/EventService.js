@@ -18,6 +18,8 @@ angular.module('app').service('EventService', ['$http', 'HostFactory', function(
     eventService.getEvent = function(id){
         return $http.get(baseUrl + '/api/event/' + id);
     };
-
+    eventService.updateEvent = function(event){
+        return $htpp.put(baseUrl +'/api/event',event);
+    }
     return eventService;
 }]);
