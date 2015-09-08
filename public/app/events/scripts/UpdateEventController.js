@@ -4,12 +4,14 @@
 angular.module('app').controller('UpdateEventController',["$scope","EventService","$routeParams",
     function($scope,EventService, $routeParams){
 
-            EventService.updateEvent($routeParams.event)
-                .success(function(data, status, headers, config) {
-                    toastr.success('Event Created Succesfully');
-                }).
-        error(function(data, status, headers, config) {
-            toastr.error(data);
-        });
+    $scope.updateEvent = function(){
+    EventService.updateEvent($scope.event)
+        .success(function(data, status, headers, config) {
+            toastr.success('Event Update Succesfully');
+        }).
+    error(function(data, status, headers, config) {
+        toastr.error(data);
 
+     });
+    };
     }]);
