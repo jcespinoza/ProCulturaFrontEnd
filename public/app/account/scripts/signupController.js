@@ -32,7 +32,7 @@ angular.module('app').controller('SignUpController', ['$scope','UserService','$l
                 toastr.success(data.Message);
                 $location.path('/login');
             }).error(function(data, status, headers, config) {
-                toastr.error(data);
+                toastr.error(data.Message);
                 $scope.isProcessing = false;
                 $scope.showErrorMessage = true;
             });
