@@ -21,7 +21,7 @@ angular.module('app').controller('LoginController', ['$cookies', '$scope', 'Logi
                     $scope.isProcessing = false;
                 }).
                 error(function(data, status, headers, config) {
-                    toastr.error(data);
+                    toastr.error(data.Message);
                     $scope.isProcessing = false;
                     $scope.showErrorMessage = true;
                 });
