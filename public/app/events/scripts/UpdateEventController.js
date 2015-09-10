@@ -17,9 +17,9 @@ angular.module('app').controller('UpdateEventController',["$scope","EventService
     };
     
     $scope.getEvent = function(){
-        $scope.event = EventService.getEvent($routeParams)
+        EventService.getEvent($routeParams.eventId)
         .success(function(data, status, headers, config) {
-            
+                $scope.event = data;
         }).
     error(function(data, status, headers, config) {
         toastr.error(data);

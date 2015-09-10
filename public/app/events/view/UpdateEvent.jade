@@ -15,7 +15,7 @@ section.sub-banner.newsection
                      label
                         | Nombre del Evento
                         span *
-                     input.textflied(value="{{event.Name}}", type='text', ng-model='event.Name', required)
+                     input.textflied( type='text', ng-model='event.Name', required)
                      i.icon-abs.fa.fa-user
                p
                   div.tooltip-bottom(data-tooltip='Ej. Obra Teatral: Helen Keller ')
@@ -48,7 +48,7 @@ section.sub-banner.newsection
                .row
                   .col-md-6.col-sm-6
                      div.tooltip-bottom(data-tooltip='Ej. Obra Teatral: Helen Keller ')
-                        input.textfliedCalendar(value="{{event.BeginDate}}", type='date', ng-model='event.BeginDate', required)
+                        input.textfliedCalendar(value="{{event.BeginDate | date}}", type='date', ng-model='event.BeginDate', required)
                   .col-md-6.col-sm-6
                      div.tooltip-bottom(data-tooltip='Ej. Obra Teatral: Helen Keller ')
                         input.textfliedCalendar(type='time', value = '00:00')
@@ -63,7 +63,7 @@ section.sub-banner.newsection
                .row
                   .col-md-6.col-sm-6
                      div.tooltip-bottom(data-tooltip='Ej. Obra Teatral: Helen Keller ')
-                        input.textfliedCalendar(value="{{event.EndDate}}", type='date', ng-model='event.EndDate')
+                        input.textfliedCalendar(value="{{event.EndDate | date}}", type='date', ng-model='event.EndDate')
                   .col-md-6.col-sm-6
                      div.tooltip-bottom(data-tooltip='Ej. Obra Teatral: Helen Keller ')
                         input.textfliedCalendar(type='time', value = '00:00')
