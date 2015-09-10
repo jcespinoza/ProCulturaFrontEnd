@@ -1,8 +1,124 @@
-//
-   Created by william on 8/31/15.
+// Sub-banner
+section.sub-banner.newsection
+  .container
+     h2.title Event Detail
+// Events
+section.events.text-left.newsection
+  .container
+    .row
+      // col-md-9
+      .col-md-9.col-sm-9
+        // Event Detail
+        section.event-detail.newsection
+          h2.main-title
+            | {{event.Name}}
+          // meta
+          ul.meta.clearfix
+            li.date
+              i.icon.fa.fa-calendar
+              |  {{event.BeginDate | date}}
+            li
+              a(href='#')
+                i.icon.fa.fa-map-marker
+                |  {{event.Location}}
 
-div
-   h1 Titulo: {{event.Name}}
+          // event-detail-img
+          .event-detail-img
+            img(src='{{event.ImageUrl}}', alt='')
+          h3.SubjectTitle De que se trata?
+          p.LongDescription
+            | {{event.LongDescription}}
 
-div
-   strong Lugar: {{event.Location}}
+          // Social Icon
+          .social-icon
+            a.facebook.facebook-pagle(href='#') FACEBOOK PAGE
+            a.facebook.fa.fa-facebook(href='#')
+            a.twitter.fa.fa-twitter(href='#')
+            a.googleplus.fa.fa-google-plus(href='#')
+            a.vimeo.fa.fa-vimeo-square(href='#')
+            a.linkedin.fa.fa-linkedin(href='#')
+        // Ticket Resgister
+        section.ticket-register
+          hr
+          h2.title Get Tickets and Register Now
+          .row
+            .col-md-4.col-sm-4
+              .ticket.clearfix
+                h3.title one day ticket
+                .ticket-value
+                  span $ 29
+                ul
+                  li Full-access to all sessions
+                  li Free wifi at the conference
+                  li Conference plus lunch coffee/snacks
+                a.btn.btn-pri(href='#')
+                  i.button-icon.fa.fa-arrow-circle-o-down
+                  | Register
+            .col-md-4.col-sm-4
+              .ticket.clearfix
+                h3.title two day ticket
+                .ticket-value
+                  span $ 39
+                ul
+                  li Full-access to all sessions
+                  li Free wifi at the conference
+                  li Conference plus lunch coffee/snacks
+                a.btn.btn-pri(href='#')
+                  i.button-icon.fa.fa-arrow-circle-o-down
+                  | Register
+            .col-md-4.col-sm-4
+              .ticket.clearfix
+                h3.title All day ticket
+                .ticket-value
+                  span $ 49
+                ul
+                  li Full-access to all sessions
+                  li Free wifi at the conference
+                  li Conference plus lunch coffee/snacks
+                a.btn.btn-pri(href='#')
+                  i.button-icon.fa.fa-arrow-circle-o-down
+                  | Reg?ster
+          a.btn.btn-pri.btn-lg(href='#') seating is limited ? register now
+      // Col-md-3
+      .col-md-3.col-sm-3
+        aside#aside.aside-bar-style-two.clearfix
+          .widget.border-remove
+            #contact-map.map
+            .clearfix
+              .main-example
+                #upcomeing-events.countdown-container
+            a.btn.btn-black.btn-full(href='#')
+              i.icon.fa.fa-heart
+              | Add wishlist
+            a.btn.btn-Gradient-pri.btn-full(href='#')
+              i.icon.fa.fa-ticket(style="color: white")
+              | Comprar
+          .widget.tag
+            h3.title Etiquetas
+            a(href='#') Event
+            a(href='#') Fashion
+            a(href='#') Design
+            a(href='#') Hotels
+            a(href='#') Up Coming
+            a(href='#') Venue
+            a(href='#') Speaker
+            a.last(href='#') Conference
+          .widget
+            h3.title Organizador
+            p Descripcion del organizador del evento
+            a.btn.btn-black.contact-button(href='#')
+              i.button-icon.fa.fa-envelope-o
+              | Contactar al Organizador
+            ul.social-icon
+              li.email
+                a(href='#')
+                  i.icon.fa.fa-user
+                  .content View Profile of EventOrganizer
+              li.facebook
+                a(href='#')
+                  i.icon.fa.fa-facebook
+                  .content facebook.com/EventOrganizer
+              li.twitter
+                a(href='#')
+                  i.icon.fa.fa-twitter
+                  .content twitter.com/EventOrganizer

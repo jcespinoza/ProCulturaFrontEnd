@@ -22,33 +22,34 @@ section.sub-banner.newsection
                     .response
                     p
                         label(for='name')
-                            | Name
+                            | Nombre
                             span *
-                        input#contactname.textflied(type='text', value='', ng-model='user.name', name='name', placeholder='Nombre')
-                        i.icon.fa.fa-user
+                        input#contactname.textflied(type='text', ng-model='user.name', name='name', placeholder='Nombre')
+                        i.icon-abs.fa.fa-user
+
                     p
                         label(for='username')
-                            | Usuario o Email
+                            | Usuario o Correo Electronico
                             span *
-                        input#contactname.textflied(type='text', value='', ng-model='user.email', name='username', placeholder='Usuario')
-                        i.icon.fa.fa-envelope
+                        input#contactname.textflied(type='text', ng-model='user.email', name='username', placeholder='Correo Electronico')
+                        i.icon-abs.fa.fa-envelope
+
                     p
                         label(for='password')
                             | Contraseña
                             span *
-                        input#email.textflied(name='password', type='password', value='', ng-change="confirmPassword()", ng-model="user.password", ng-pattern="'^[a-zA-Z0-9]{8,}$'", required, title="8 Alphanumeric characters minimum", placeholder='Contraseña')
-                        i.icon.fa.fa-lock
+                        input#email.textflied(name='password', type='password', ng-change="confirmPassword()", ng-model="user.password", ng-pattern="'^[a-zA-Z0-9]{8,}$'", required, title="8 Alphanumeric characters minimum", placeholder='Contraseña')
+                        i.icon-abs.fa.fa-lock
+
                     p
                         label(for='confirmPassword')
                             | Confirmar Contraseña
                             span *
-                        input#email.textflied(name='confirmPassword', type='password', value='', ng-change="confirmPassword()", ng-model="user.confirmPassword", ng-pattern="'^[a-zA-Z0-9]{8,}$'", required, title="8 Alphanumeric characters minimum", placeholder='Confirmar Contraseña')
-                        i.icon.fa.fa-lock
+                        input#email.textflied(name='confirmPassword', type='password', ng-change="confirmPassword()", ng-model="user.confirmPassword", ng-pattern="'^[a-zA-Z0-9]{8,}$'", required, title="8 Alphanumeric characters minimum", placeholder='Confirmar Contraseña')
+                        i.icon-abs.fa.fa-lock
 
                     p(style="text-align: center; color: red", ng-show='showErrorMessage')
                         | Las contraseñas no coinciden
-                    p(style="text-align: center; color: green", ng-show='!showErrorMessage')
-                        | Las contraseñas coinciden
 
                     p
                         button#signupButton.btn.btn-pri(type='submit', name='signup', title='Registrarse', ng-disabled="signupForm.$invalid") Registrar
