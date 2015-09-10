@@ -20,7 +20,7 @@ angular.module('app').controller('EventController',["$scope", "$location","Event
                 $scope.isProcessing = false;
             }).
             error(function(data, status, headers, config) {
-                toastr.error(data);
+                toastr.error(data.Message);
                 $scope.isProcessing = false;
             });
     };
