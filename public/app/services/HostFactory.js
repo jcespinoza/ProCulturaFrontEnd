@@ -1,6 +1,7 @@
 angular.module('app').factory('HostFactory', function($location) {
  	var serverName = "";
- 	if($location.absUrl().indexOf('localhost')){
+ 	var indexOfLocalHost = $location.absUrl().indexOf('localhost');
+ 	if(indexOfLocalHost != -1){
          serverName = "http://localhost:11705";
  	}else
  	{
