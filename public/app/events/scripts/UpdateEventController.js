@@ -20,6 +20,10 @@ angular.module('app').controller('UpdateEventController',["$scope","EventService
         EventService.getEvent($routeParams.eventId)
         .success(function(data, status, headers, config) {
                 $scope.event = data;
+
+                $scope.event.BeginDate = new Date(data.BeginDate);
+
+                $scope.event.EndDate = new Date(data.EndDate);
         }).
     error(function(data, status, headers, config) {
         toastr.error(data);

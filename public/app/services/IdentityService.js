@@ -2,7 +2,6 @@ angular.module('app').service('IdentityService', ['$http', 'HostFactory', functi
 	var baseUrl = HostFactory.serverName;
 	
 	IdentityService.getCurrentUser = function(token){
-				  return $http.get(baseUrl + '/api/User',token);
+    	return $http.get(baseUrl + '/api/User',token);
 	}
-
-	}]);
+}]);

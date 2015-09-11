@@ -9,6 +9,9 @@ angular.module('app').controller('EventController',["$scope", "$location","Event
     EventService.getAllEvents()
         .success(function(data, status, headers, config) {
             $scope.events = data;
+        })
+        .error(function(data, status, headers, config){
+            console.log(data);
         });
 
     $scope.createEvent = function(){
