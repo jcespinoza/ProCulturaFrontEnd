@@ -48,10 +48,10 @@ section.sub-banner.newsection
                .row
                   .col-md-6.col-sm-6
                      div.tooltip-bottom(data-tooltip='Ej. Obra Teatral: Helen Keller ')
-                        input.textfliedCalendar(value="{{event.BeginDate | date}}", type='date', ng-model='event.BeginDate', required)
+                        input.textfliedCalendar(type='date', ng-model='event.BeginDate', required)
                   .col-md-6.col-sm-6
                      div.tooltip-bottom(data-tooltip='Ej. Obra Teatral: Helen Keller ')
-                        input.textfliedCalendar(type='time', value = '00:00')
+                        input.textfliedCalendar(type='time', ng-model='event.BeginDate')
                br
                .row
                   .col-md-6.col-sm-6
@@ -63,10 +63,10 @@ section.sub-banner.newsection
                .row
                   .col-md-6.col-sm-6
                      div.tooltip-bottom(data-tooltip='Ej. Obra Teatral: Helen Keller ')
-                        input.textfliedCalendar(value="{{event.EndDate | date}}", type='date', ng-model='event.EndDate')
+                        input.textfliedCalendar(type='date', ng-model='event.EndDate')
                   .col-md-6.col-sm-6
                      div.tooltip-bottom(data-tooltip='Ej. Obra Teatral: Helen Keller ')
-                        input.textfliedCalendar(type='time', value = '00:00')
+                        input.textfliedCalendar(type='time', ng-model='event.EndDate')
                p
                   div.tooltip-bottom(data-tooltip='Ej. Obra Teatral: Helen Keller ')
                      label
