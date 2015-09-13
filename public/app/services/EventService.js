@@ -19,10 +19,10 @@ angular.module('app').service('EventService', ['$http', 'HostFactory', function(
         return $http.get(baseUrl + '/api/event/' + id);
     };
     eventService.updateEvent = function(event){
-        return $http.put(baseUrl +'/api/event',event);
+        return $http.put(baseUrl +'/api/event/' + event.id, event);
     }
     eventService.deleteEvent = function(id){
-        return $htpp.delete(baseUrl +'/api/event',id)
+        return $htpp.delete(baseUrl +'/api/event/' + id)
     }
     return eventService;
 }]);

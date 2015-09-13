@@ -15,16 +15,16 @@ angular.module('app', ['ngRoute', 'ngResource','ngCookies']).config(function($ro
         .when('/events', {templateUrl: 'partials/events/view/events', controller: 'EventController'})
         .when('/createEvent', {templateUrl: 'partials/events/view/createEvent', controller: 'EventController'})
         .when('/event/:eventId', {templateUrl: 'partials/events/view/eventDetails', controller: 'EventDetailsController'})
-        .when('/updateEvent/:eventId', {templateUrl: 'partials/events/view/updateEvent', controller: 'UpdateEventController'})
+        .when('/updateEvent/:eventId', {templateUrl: 'partials/events/view/updateEvent', controller: 'UpdateEventController'});
+
 }).run(function($rootScope, $location){
     $rootScope.$on('$routeChangeError', function(event, current, previous, rejection){
         if(rejection === 'not authorized'){
             $location.path('/');
         }
-        //console.log(rejection);
     });
 }).run(function($rootScope, $location){
     $rootScope.$on('$routeChangeStart', function(event, next, current){
-        //console.log(next.templateUrl);
+        
     });
 });
