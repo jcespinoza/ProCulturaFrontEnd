@@ -2,7 +2,8 @@
  * Created by Light on 16/09/2015.
  */
 
-var L10N = {
+var L10N;
+L10N = {
 
     //CreateEventView && UpdateEventView
     updateEventTitle: "Update Event",

@@ -2,46 +2,47 @@
  * Created by Light on 16/09/2015.
  */
 
-var L10N = {
+var L10N;
+L10N = {
 
     //CreateEventView && UpdateEventView
-                updateEventTitle: "Modificar Evento",
-                createEventTitle: "Crear Evento",
-                eventName: "Nombre de Evento",
-                shortDescription: "Descripcion Corta",
-                longDescription: "Descripcion",
-                beginDate: "Fecha de Inicio",
-                endDate: "Fecha Culminacion",
-                Location: "Lugar",
-                imageUrl: "URL Imagen",
-                beginTime: "Hora Inicio",
-                endTime: "Hora Culminacion",
-                createButton: "CREAR",
-                locationTitle: "Localidad",
-        //Tooltips
-                longDescriptionTooltip: "Descripcion completa del evento.",
-                eventNameTooltip: "Ej. Obra Teatral: Helen Keller.",
-                shortDescriptionTooltip: "Breve descripcion del evento.",
-                locationTooltip: "Lugar donde se llevara a cabo el evento.",
-                imageUrlTooltip: "Direccion de la imagen del evento.",
-                beginDateTooltip: "dia/mes/a~o | Ej. 03/10/1994",
-                beginTimeTooltip: "Formato 24h | Ej. 23:59",
+    updateEventTitle: "Modificar Evento",
+    createEventTitle: "Crear Evento",
+    eventName: "Nombre de Evento",
+    shortDescription: "Descripcion Corta",
+    longDescription: "Descripcion",
+    beginDate: "Fecha de Inicio",
+    endDate: "Fecha Culminacion",
+    Location: "Lugar",
+    imageUrl: "URL Imagen",
+    beginTime: "Hora Inicio",
+    endTime: "Hora Culminacion",
+    createButton: "CREAR",
+    locationTitle: "Localidad",
+    //Tooltips
+    longDescriptionTooltip: "Descripcion completa del evento.",
+    eventNameTooltip: "Ej. Obra Teatral: Helen Keller.",
+    shortDescriptionTooltip: "Breve descripcion del evento.",
+    locationTooltip: "Lugar donde se llevara a cabo el evento.",
+    imageUrlTooltip: "Direccion de la imagen del evento.",
+    beginDateTooltip: "dia/mes/a~o | Ej. 03/10/1994",
+    beginTimeTooltip: "Formato 24h | Ej. 23:59",
 
     //Login && Signup
-                loginTitle: "Iniciar sesion",
-                signupTitle: "Registrase",
-                signupSubtitle: "Regístrese a ProCultura",
-                username: "Usuario o Correo Electronico",
-                signupName: "Nombre Completo",
-                password: "Contraseña",
-                forgotPassword: "¿Olvido la Contraseña?",
-                confirmPassword: "Confirmar Contraseña",
-                socialLogin: "o ingresar mediante una red social",
-                noAccount: "¿No posee una cuenta?",
-                hasAccount: "¿Ya posee una cuenta?",
-                registerButton: "Registrarse",
-                loginButton: "Ingresar",
-                noMatchPassword: "Las contraseñas no coiciden",
+    loginTitle: "Iniciar sesion",
+    signupTitle: "Registrase",
+    signupSubtitle: "Regístrese a ProCultura",
+    username: "Usuario o Correo Electronico",
+    signupName: "Nombre Completo",
+    password: "Contraseña",
+    forgotPassword: "¿Olvido la Contraseña?",
+    confirmPassword: "Confirmar Contraseña",
+    socialLogin: "o ingresar mediante una red social",
+    noAccount: "¿No posee una cuenta?",
+    hasAccount: "¿Ya posee una cuenta?",
+    registerButton: "Registrarse",
+    loginButton: "Ingresar",
+    noMatchPassword: "Las contraseñas no coiciden",
 
 
     //DetailEventView
