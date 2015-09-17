@@ -2,7 +2,7 @@
  * Created by Light on 16/09/2015.
  */
 
-var Strings = {
+var L10N = {
 
     //CreateEventView && UpdateEventView
                 updateEventTitle: "Modificar Evento",
@@ -73,5 +73,5 @@ var Strings = {
                 upcomingEvents: "Eventos Proximos",
                 freeEntry: "Entrada Gratis",
                 soldOut: "Agotados",
-                loadMore: "load more"
+                loadMore: "cargar mas"
 };
