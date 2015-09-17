@@ -5,13 +5,15 @@
 angular.module('app').controller('EventController',["$scope", "$location","EventService", function($scope, $location, EventService){
     $scope.events = [];
     $scope.event = {};
+    $scope.allEvents = true;
 
     EventService.getAllEvents()
         .success(function(data, status, headers, config) {
             $scope.events = data;
+            $scope.allEvents = false;
         })
         .error(function(data, status, headers, config){
-            console.log(data);
+            toastr.error(data.Message);
         });
 
     $scope.createEvent = function(){

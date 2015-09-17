@@ -121,28 +121,30 @@
     }
 }
 
-
 /*Please wait*/
-.loading-text {
+.loadingtext {
     text-align: center;
-    color: #666;
-    font-size: 50px;
-    font-family: 'Open Sans';
+    color: dodgerblue;
+    font-size: 30px;
+    font-family: 'Calibri';
     position: absolute;
-    top: 60%;
+    top: 62%;
+    font-weight: 600;
     left: 45%;
+    z-index: 1;
 }
 
 .spinner {
-    top: -30px;
-    left: 52%;
-    position: absolute;
     width: 50px;
     height: 50px;
-    background-color: #444;
+    background-color: lightsalmon;
     margin: 100px auto 10px;
     -webkit-animation: rotateplane 1.2s infinite ease-in-out;
     animation: rotateplane 1.2s infinite ease-in-out;
+    z-index: 1;
+    position: absolute;
+    top: 40%;
+    left: 50%;
 }
 
 @-webkit-keyframes rotateplane {
