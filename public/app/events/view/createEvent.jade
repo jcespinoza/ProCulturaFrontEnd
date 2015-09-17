@@ -18,14 +18,14 @@ section.sub-banner.newsection
             .col-md-6.col-sm-6
                 form#contactform(name="CreateEvent", method='post', ng-submit='createEvent()')
                     p
-                        div.tooltip-bottom(data-tooltip='Ej. Obra Teatral: Helen Keller ')
+                        div.tooltip-bottom(data-tooltip='Ej. Obra Teatral: Helen Keller')
                             label
                                 | Nombre del Evento
                                 span *
                             input.textflied(type='text', ng-model='event.Name', required)
                             i.icon-abs.fa.fa-user
                     p
-                        div.tooltip-bottom(data-tooltip='Breve descripcion del evento.')
+                        div.tooltip-bottom(data-tooltip='Breve descripcion del evento')
                             label
                                 | Descripcion Corta
                                 span *
@@ -82,7 +82,7 @@ section.sub-banner.newsection
                             textarea.texttextarea(type='text', ng-model='event.LongDescription', placeholder='Descripcion del Evento', rows='8', required)
                             i.icon-abs.fa.fa-comments(style="color: orange")
                     p
-                        button#submitButton.btn.btn-disabled(type='submit', title='Crear Evento') CREAR
+                        button#submitButton.btn.btn-disabled(type='submit') CREAR
             .col-md-6.col-sm-6
                 // Map
                 .map-container
