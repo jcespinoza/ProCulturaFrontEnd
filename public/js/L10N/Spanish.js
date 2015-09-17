@@ -4,8 +4,9 @@
 
 var Strings = {
 
-    //CreateView
-                title: "Crear Evento",
+    //CreateEventView && UpdateEventView
+                updateEventTitle: "Modificar Evento",
+                createEventTitle: "Crear Evento",
                 eventName: "Nombre de Evento",
                 shortDescription: "Descripcion Corta",
                 longDescription: "Descripcion",
@@ -27,10 +28,16 @@ var Strings = {
                 beginTimeTooltip: "Formato 24h | Ej. 23:59",
 
     //Login
+                loginTitle: "Iniciar sesion",
+                username: "Usuario o Correo Electronico",
 
-    //Login End
+    //DetailEventView
+                detailEventTitle: "Detalle del Evento",
+                subjectTitle: "De que se trata?",
 
-    //UpdateView
+    //ListEvents
+                listEventTitle: "Eventos",
+                buyButton: "comprar",
 
-    //UpdateView End
+
 };
