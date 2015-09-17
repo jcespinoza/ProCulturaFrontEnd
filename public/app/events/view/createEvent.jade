@@ -75,11 +75,11 @@ section.sub-banner.newsection
                             textarea.texttextarea(type='text', ng-model='event.LongDescription', placeholder='Descripcion del Evento', rows='8', required)
                             i.icon-abs.fa.fa-comments(style="color: orange")
                     p
-                        .div(ng-show='!isProcessing')
-                            button#submitButton.btn.btn-disabled(type='submit') CREAR
-                        .div(ng-show='isProcessing')
-                            #loading
-                                .span CARGANDO
+                    .div(ng-show='!isProcessing')
+                        button#submitButton.btn.btn-disabled(type='submit') CREAR
+                    .div(ng-show='isProcessing')
+                        .loading
+                            .span CARGANDO
             .col-md-6.col-sm-6
                 // Map
                 .map-container
