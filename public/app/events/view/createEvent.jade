@@ -78,8 +78,11 @@ section.sub-banner.newsection
                     .div(ng-show='!isProcessing')
                         button#submitButton.btn.btn-disabled(type='submit') CREAR
                     .div(ng-show='isProcessing')
-                        .loading
-                            .span CARGANDO
+                        .loader
+                            h1 CARGANDO
+                            span
+                            span
+                            span
             .col-md-6.col-sm-6
                 // Map
                 .map-container
