@@ -1,13 +1,6 @@
 //
    Created by Light on 27/08/2015.
-//.layer(ng-show='isProcessing')
-    .loader
-        .bubble
-        .bubble
-        .bubble
-        .bubble
-        .bubble
-.box.loading(ng-show='isProcessing')
+
 section.sub-banner.newsection
     .container
         h2.title Crear Evento
@@ -32,7 +25,7 @@ section.sub-banner.newsection
                             input.textflied(type='text', ng-model='event.ShortDescription', required)
                             i.icon-abs.fa.fa-edit
                     p
-                        div.tooltip-bottom(data-tooltip='Lugar donde se llevara a cabo el evento. ')
+                        div.tooltip-bottom(data-tooltip='Lugar donde se llevara a cabo el evento.')
                             label
                                 | Lugar
                                 span *
@@ -82,7 +75,11 @@ section.sub-banner.newsection
                             textarea.texttextarea(type='text', ng-model='event.LongDescription', placeholder='Descripcion del Evento', rows='8', required)
                             i.icon-abs.fa.fa-comments(style="color: orange")
                     p
-                        button#submitButton.btn.btn-disabled(type='submit') CREAR
+                        .div(ng-show='!isProcessing')
+                            button#submitButton.btn.btn-disabled(type='submit') CREAR
+                        .div(ng-show='isProcessing')
+                            #loading
+                                .span CARGANDO
             .col-md-6.col-sm-6
                 // Map
                 .map-container
