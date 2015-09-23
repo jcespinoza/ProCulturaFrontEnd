@@ -4,8 +4,8 @@ block countdown-banner
     .banner
         .container
             .center
-                h1.title {{L10N.countdownBannerTitle}}
-                p {{L10N.countdownBannerSubtitle}}
+                h1.title {{L10N.countdownBannerTitle | translate}}
+                p {{L10N.countdownBannerSubtitle | translate}}
                 // Clock
                 .clock.clearfix
                     .clock-item.clock-days
@@ -14,25 +14,25 @@ block countdown-banner
                                 #canvas-days.clock-canvas
                                 .clock-content
                                     p.val 9
-                                    strong.typ.type-days(style='color: white') {{L10N.days}}
+                                    strong.typ.type-days(style='color: white') {{L10N.days | translate}}
                     .clock-item.clock-hours
                         .wrap
                             .inner
                                 #canvas-hours.clock-canvas
                                 .clock-content
                                     p.val 0
-                                    p.typ.type-hours {{L10N.hours}}
+                                    p.typ.type-hours {{L10N.hours | translate}}
                     .clock-item.clock-minutes
                         .wrap
                             .inner
                                 #canvas-minutes.clock-canvas
                                 .clock-content
                                     p.val 0
-                                    p.typ.type-minutes {{L10N.minutes}}
+                                    p.typ.type-minutes {{L10N.minutes | translate}}
                     .clock-item.clock-seconds
                         .wrap
                             .inner
                                 #canvas-seconds.clock-canvas
                                 .clock-content
                                     p.val 0
-                                    p.typ.type-seconds {{L10N.seconds}}
+                                    p.typ.type-seconds {{L10N.seconds | translate}}

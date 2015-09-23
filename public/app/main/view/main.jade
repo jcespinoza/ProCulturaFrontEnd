@@ -5,7 +5,7 @@
 .container
     .jumbotron
         h1 ProCultura
-        h3 {{L10N.mainTitle}}
+        h3 {{L10N.mainTitle | translate}}
     .row
         .col-md-6
 section.events.newsection
@@ -14,9 +14,9 @@ section.events.newsection
         .tabs.ui-tabs.ui-widget.ui-widget-content.ui-corner-all
             ul.clearfix.ui-tabs-nav.ui-helper-reset.ui-helper-clearfix.ui-widget-header.ui-corner-all(role='tablist')
                 li.ui-state-default.ui-corner-top.ui-tabs-active.ui-state-active(role='tab', tabindex='0', aria-controls='tabs-1', aria-labelledby='ui-id-1', aria-selected='true')
-                    a#ui-id-1.ui-tabs-anchor(href='#', role='presentation', tabindex='-1', ng-click="showEvents('upcoming')") {{L10N.upcomingEvents}}
+                    a#ui-id-1.ui-tabs-anchor(href='#', role='presentation', tabindex='-1', ng-click="showEvents('upcoming')") {{L10N.upcomingEvents | translate}}
                 li.ui-state-default.ui-corner-top(role='tab', tabindex='-1', aria-controls='tabs-2', aria-labelledby='ui-id-2', aria-selected='false')
-                    a#ui-id-2.ui-tabs-anchor(href='#', role='presentation', tabindex='-1', ng-click="showEvents('popular')") {{L10N.popularEvents}}
+                    a#ui-id-2.ui-tabs-anchor(href='#', role='presentation', tabindex='-1', ng-click="showEvents('popular')") {{L10N.popularEvents | translate}}
             // Tabs-1
             #tabs-1(ng-show="showUpCommingEvents")
                 .event-container
@@ -28,9 +28,9 @@ section.events.newsection
                                 .event-content
                                     h3.title {{event.title}}
                                     p {{event.description}}
-                                    a.btn.btn-pri(href='#', ng-show="event.isPaid") {{L10N.isPaid}}
-                                    a.btn.btn-disabled.disabled(href='#', ng-show="event.isSoldOut") {{L10N.soldOut}}
-                                    a.btn.btn-sec(href='#', ng-show="event.isFree") {{L10N.freeEntry}}
+                                    a.btn.btn-pri(href='#', ng-show="event.isPaid") {{L10N.isPaid | translate}}
+                                    a.btn.btn-disabled.disabled(href='#', ng-show="event.isSoldOut") {{L10N.soldOut | translate}}
+                                    a.btn.btn-sec(href='#', ng-show="event.isFree") {{L10N.freeEntry | translate}}
                                 .links.clearfix
                                     ul
                                         li
@@ -75,4 +75,4 @@ section.events.newsection
                                                 i.icon.fa.fa-comment
                                                 | 33
                     // row
-            a.btn.btn-border.btn-lg(href='/') {{L10N.loamore}}
+            a.btn.btn-border.btn-lg(href='/') {{L10N.loamore | translate}}

@@ -15,28 +15,28 @@ section.sub-banner.newsection
     .container
         .row
             .col-md-6.col-md-offset-3
-                h2.title {{L10N.signupSubtitle}}
+                h2.title {{L10N.signupSubtitle | translate}}
                 form#contactform(name="loginForm", method='post', ng-submit='signIn()', ng-disabled='isProcessing')
                     .response
                     p
                         label(for='username')
-                            | {{L10N.username}}
+                            | {{L10N.username | translate}}
                             span *
                         input#contactname.textflied(type='text', value='', ng-model='user.Email', name='username', placeholder='Usuario')
                         i.icon-abs.fa.fa-user
                     p
                         label(for='password')
-                            | {{L10N.password}}
+                            | {{L10N.password | translate}}
                             span *
                         input#email.textflied(type='password', value='', ng-model='user.Password', name='password', placeholder='Password')
                         i.icon-abs.fa.fa-lock
                     p
                         span.pull-right
-                            a(href='#')  {{L10N.forgotPassword}}
+                            a(href='#')  {{L10N.forgotPassword | translate}}
                     p
-                        button#loginButton.btn.btn-pri(type='submit', name='login', title='Ingresar', ng-disabled="loginForm.$invalid") Ingresar
+                        button#loginButton.btn.btn-pri(type='submit', name='login', ng-disabled="loginForm.$invalid") {{L10N.loginButton | translate}}
                             .login-social-link.centered(align="center")
-                        p {{L10N.socialLogin}}
+                        p {{L10N.socialLogin | translate}}
                         button.btn.btn-google
                             i.fa.fa-google-plus-square
                             |  Google+
@@ -47,4 +47,4 @@ section.sub-banner.newsection
                         | {{L10N.noAccount}}
                         br
                         a.title(href='/signup')
-                            | {{L10N.registerButton}}
+                            | {{L10N.registerButton | translate}}

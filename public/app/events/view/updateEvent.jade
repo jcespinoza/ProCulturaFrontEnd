@@ -2,80 +2,80 @@
    Created by Light on 06/09/2015.
 section.sub-banner.newsection
     .container
-        h2.title {{L10N.updateEventTitle}}
+        h2.title {{L10N.updateEventTitle | translate}}
 .contact.newsection
     .container
         .row
             .col-md-6.col-sm-6
                 form#contactform(method='post', ng-submit='updateEvent()')
                     p
-                        div.tooltip-bottom(data-tooltip='{{L10N.eventNameTooltip}}')
+                        div.tooltip-bottom(data-tooltip='{{L10N.eventNameTooltip | translate}}')
                             label
-                                | {{L10N.eventName}}
+                                | {{L10N.eventName | translate}}
                                 span *
                             input.textflied( type='text', ng-model='event.Name', required)
                             i.icon-abs.fa.fa-user
                     p
-                        div.tooltip-bottom(data-tooltip='{{L10N.shortDescriptionTooltip}}')
+                        div.tooltip-bottom(data-tooltip='{{L10N.shortDescriptionTooltip | translate}}')
                             label
-                                | {{L10N.shortDescription}}
+                                | {{L10N.shortDescription | translate}}
                                 span *
                             input.textflied(value="{{event.ShortDescription}}", type='text', ng-model='event.ShortDescription', required)
                             i.icon-abs.fa.fa-edit
                     p
-                        div.tooltip-bottom(data-tooltip='{{L10N.locationTooltip}}')
+                        div.tooltip-bottom(data-tooltip='{{L10N.locationTooltip | translate}}')
                             label
-                                | {{L10N.Location}}
+                                | {{L10N.Location | translate}}
                                 span *
                             input.textflied(value="{{event.Location}}", type='text', ng-model='event.Location', required)
                             i.icon-abs.fa.fa-map-marker
                     p
-                        div.tooltip-bottom(data-tooltip='{{L10N.imageUrlTooltip}}')
+                        div.tooltip-bottom(data-tooltip='{{L10N.imageUrlTooltip | translate}}')
                             label
-                                | {{L10N.imageUrl}}
+                                | {{L10N.imageUrl | translate}}
                             input.textflied(value="{{event.ImageUrl}}", type='text', ng-model='event.ImageUrl')
                             i.icon-abs.fa.fa-image(style="color: brown")
                     .row
                         .col-md-6.col-sm-6
                             label
-                                | {{L10N.beginDate}}
+                                | {{L10N.beginDate | translate}}
                                 span *
                         .col-md-6.col-sm-6
                             label
-                                | {{L10N.beginTime}}
+                                | {{L10N.beginTime | translate}}
                     .row
                         .col-md-6.col-sm-6
-                            div.tooltip-bottom(data-tooltip='{{L10N.beginDateTooltip}}')
+                            div.tooltip-bottom(data-tooltip='{{L10N.beginDateTooltip | translate}}')
                                 input.textfliedCalendar(type='date', ng-model='event.BeginDate', required)
                         .col-md-6.col-sm-6
-                            div.tooltip-bottom(data-tooltip='{{L10N.beginTimeTooltip}}')
+                            div.tooltip-bottom(data-tooltip='{{L10N.beginTimeTooltip | translate}}')
                                 input.textfliedCalendar(type='time', ng-model='event.BeginDate')
                     br
                     .row
                         .col-md-6.col-sm-6
                             label
-                                | {{L10N.endDate}}
+                                | {{L10N.endDate | translate}}
                         .col-md-6.col-sm-6
                             label
-                                | {{L10N.endTime}}
+                                | {{L10N.endTime | translate}}
                     .row
                         .col-md-6.col-sm-6
                             input.textfliedCalendar(type='date', ng-model='event.EndDate')
                         .col-md-6.col-sm-6
                             input.textfliedCalendar(type='time', ng-model='event.EndDate')
                     p
-                        div.tooltip-bottom(data-tooltip='{{L10N.longDescriptionTooltip}}')
+                        div.tooltip-bottom(data-tooltip='{{L10N.longDescriptionTooltip | translate}}')
                             label
-                                | {{L10N.longDescription}}
+                                | {{L10N.longDescription | translate}}
                                 span *
                             textarea.texttextarea(value="{{event.LgonDescription}}", type='text', ng-model='event.LongDescription', placeholder='Descripcion del Evento', rows='8', required)
                             i.icon-abs.fa.fa-comments(style="color: orange")
                     p
-                        button#submitButton.btn.btn-disabled(type='submit', title='Modificar Evento') {{L10N.updateButton}}
+                        button#submitButton.btn.btn-disabled(type='submit', title='Modificar Evento') {{L10N.updateButton | translate}}
             .col-md-6.col-sm-6
                 // Map
                 .map-container
-                    h2.title {{L10N.locationTitle}}
+                    h2.title {{L10N.locationTitle | translate}}
                     #contact-map.map
                 // Contact Info
                 .contactinfo
