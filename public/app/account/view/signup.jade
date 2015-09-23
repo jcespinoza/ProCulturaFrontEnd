@@ -1,8 +1,7 @@
 section.sub-banner.newsection
     .container
-        h2.title Registro
-
-// Modal Dialog
+        h2.title {{L10N.signupTitle}}
+            // Modal Dialog
 .modal.fade(data-backdrop='static', data-keyboard='false', tabindex='-1', role='dialog', aria-hidden='true', style='padding-top:30%; overflow-y:visible;')
 .modal-dialog.modal-m(ng-show='isProcessing')
     .modal-content
@@ -12,50 +11,43 @@ section.sub-banner.newsection
             .progress.progress-striped.active(style='margin-bottom:0;')
                 .progress-bar(style='width: 100%')
 // End Modal dialog
-
 .contact.newsection
     .container
         .row
             .col-md-6.col-md-offset-3
-                h2.title Regístrese a ProCultura
+                h2.title {{L10N.signupSubtitle}}
                 form#contactform(method='post', ng-submit='createUser()', name="signupForm" ng-disabled='isProcessing')
                     .response
                     p
                         label(for='name')
-                            | Nombre
+                            | {{L10N.signupName}}
                             span *
                         input#contactname.textflied(type='text', ng-model='user.name', name='name', placeholder='Nombre')
                         i.icon-abs.fa.fa-user
-
-                    p
+                            p
                         label(for='username')
-                            | Usuario o Correo Electronico
+                            | {{L10N.username}}
                             span *
                         input#contactname.textflied(type='text', ng-model='user.email', name='username', placeholder='Correo Electronico')
                         i.icon-abs.fa.fa-envelope
-
-                    p
+                            p
                         label(for='password')
-                            | Contraseña
+                            | {{L10N.password}}
                             span *
                         input#email.textflied(name='password', type='password', ng-change="confirmPassword()", ng-model="user.password", ng-pattern="'^[a-zA-Z0-9]{8,}$'", required, title="8 Alphanumeric characters minimum", placeholder='Contraseña')
                         i.icon-abs.fa.fa-lock
-
-                    p
+                            p
                         label(for='confirmPassword')
-                            | Confirmar Contraseña
+                            | {{L10N.confirmPassword}}
                             span *
                         input#email.textflied(name='confirmPassword', type='password', ng-change="confirmPassword()", ng-model="user.confirmPassword", ng-pattern="'^[a-zA-Z0-9]{8,}$'", required, title="8 Alphanumeric characters minimum", placeholder='Confirmar Contraseña')
                         i.icon-abs.fa.fa-lock
-
-                    p(style="text-align: center; color: red", ng-show='showErrorMessage')
-                        | Las contraseñas no coinciden
-
-                    p
-                        button#signupButton.btn.btn-pri(type='submit', name='signup', title='Registrarse', ng-disabled="signupForm.$invalid") Registrar
-
-                    .registration
-                        | ¿Ya posee una cuenta?
+                            p(style="text-align: center; color: red", ng-show='showErrorMessage')
+                        | {{L10N.noMatchPassword}}
+                        p
+                        button#signupButton.btn.btn-pri(type='submit', name='signup', title='Registrarse', ng-disabled="signupForm.$invalid") {{L10N.registerButton}}
+                            .registration
+                        | {{L10N.hasAccount}}
                         br
                         a(href='/login')
-                            | Ingresar
+                            | {{L10N.loginButton}}

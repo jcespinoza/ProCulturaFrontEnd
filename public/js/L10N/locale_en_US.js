@@ -74,5 +74,11 @@ L10N = {
     upcomingEvents: "Upcoming Events",
     freeEntry: "Free Entry",
     soldOut: "Sold Out",
-    loadMore: "load more"
+    isPaid: "Paid",
+    loadMore: "load more",
+
+    //Loader
+    loaderMessage: "LOADING",
+    wait: "Please Wait..."
+
 };

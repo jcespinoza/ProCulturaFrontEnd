@@ -1,8 +1,7 @@
 section.sub-banner.newsection
     .container
-        h2.title Login
-
-// Modal Dialog
+        h2.title {{L10N.loginTitle}}
+            // Modal Dialog
 .modal.fade(data-backdrop='static', data-keyboard='false', tabindex='-1', role='dialog', aria-hidden='true', style='padding-top:30%; overflow-y:visible;')
 .modal-dialog.modal-m(ng-show='isProcessing')
     .modal-content
@@ -12,34 +11,32 @@ section.sub-banner.newsection
             .progress.progress-striped.active(style='margin-bottom:0;')
                 .progress-bar(style='width: 100%')
 // End Modal dialog
-
 .contact.newsection
     .container
         .row
             .col-md-6.col-md-offset-3
-                h2.title Ingrese a ProCultura
+                h2.title {{L10N.signupSubtitle}}
                 form#contactform(name="loginForm", method='post', ng-submit='signIn()', ng-disabled='isProcessing')
-                    .response  
+                    .response
                     p
                         label(for='username')
-                            | Usuario o Email
+                            | {{L10N.username}}
                             span *
                         input#contactname.textflied(type='text', value='', ng-model='user.Email', name='username', placeholder='Usuario')
                         i.icon-abs.fa.fa-user
                     p
                         label(for='password')
-                            | Password
+                            | {{L10N.password}}
                             span *
                         input#email.textflied(type='password', value='', ng-model='user.Password', name='password', placeholder='Password')
                         i.icon-abs.fa.fa-lock
                     p
                         span.pull-right
-                            a(href='#')  ¿Olvido Contraseña?
+                            a(href='#')  {{L10N.forgotPassword}}
                     p
                         button#loginButton.btn.btn-pri(type='submit', name='login', title='Ingresar', ng-disabled="loginForm.$invalid") Ingresar
-
-                    .login-social-link.centered(align="center")
-                        p o ingresar mediante una red social
+                            .login-social-link.centered(align="center")
+                        p {{L10N.socialLogin}}
                         button.btn.btn-google
                             i.fa.fa-google-plus-square
                             |  Google+
@@ -47,7 +44,7 @@ section.sub-banner.newsection
                             i.fa.fa-linkedin-square
                             |  LinkedIn
                     .registration(align="center")
-                        | ¿No posee una cuenta?
+                        | {{L10N.noAccount}}
                         br
-                        a.title(href='/si   gnup')
-                            | Registrarse
+                        a.title(href='/signup')
+                            | {{L10N.registerButton}}

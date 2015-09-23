@@ -4,8 +4,8 @@ block countdown-banner
     .banner
         .container
             .center
-                h1.title Preparate para tu siguiente evento!
-                p Comentarios aquí..!
+                h1.title {{L10N.countdownBannerTitle}}
+                p {{L10N.countdownBannerSubtitle}}
                 // Clock
                 .clock.clearfix
                     .clock-item.clock-days
@@ -14,25 +14,25 @@ block countdown-banner
                                 #canvas-days.clock-canvas
                                 .clock-content
                                     p.val 9
-                                    strong.typ.type-days(style='color: white') DIAS
+                                    strong.typ.type-days(style='color: white') {{L10N.days}}
                     .clock-item.clock-hours
                         .wrap
                             .inner
                                 #canvas-hours.clock-canvas
                                 .clock-content
                                     p.val 0
-                                    p.typ.type-hours HORAS
+                                    p.typ.type-hours {{L10N.hours}}
                     .clock-item.clock-minutes
                         .wrap
                             .inner
                                 #canvas-minutes.clock-canvas
                                 .clock-content
                                     p.val 0
-                                    p.typ.type-minutes MINUTOS
+                                    p.typ.type-minutes {{L10N.minutes}}
                     .clock-item.clock-seconds
                         .wrap
                             .inner
                                 #canvas-seconds.clock-canvas
                                 .clock-content
                                     p.val 0
-                                    p.typ.type-seconds SEGUNDOS
+                                    p.typ.type-seconds {{L10N.seconds}}

@@ -1,9 +1,8 @@
 //
    Created by Light on 27/08/2015.
-
 section.sub-banner.newsection
     .container
-        h2.title Crear Evento
+        h2.title {{L10N.createEventTitle}}
 // Contact
 .contact.newsection
     .container
@@ -11,55 +10,55 @@ section.sub-banner.newsection
             .col-md-6.col-sm-6
                 form#contactform(name="CreateEvent", method='post', ng-submit='createEvent()')
                     p
-                        div.tooltip-bottom(data-tooltip='Ej. Obra Teatral: Helen Keller')
+                        div.tooltip-bottom(data-tooltip='{{L10N.eventNameTooltip}}')
                             label
-                                | Nombre del Evento
+                                | {{L10N.eventName}}
                                 span *
                             input.textflied(type='text', ng-model='event.Name', required)
                             i.icon-abs.fa.fa-user
                     p
-                        div.tooltip-bottom(data-tooltip='Breve descripcion del evento')
+                        div.tooltip-bottom(data-tooltip='{{L10N.shortDescription}}')
                             label
-                                | Descripcion Corta
+                                | {{L10N.shortDescription}}
                                 span *
                             input.textflied(type='text', ng-model='event.ShortDescription', required)
                             i.icon-abs.fa.fa-edit
                     p
-                        div.tooltip-bottom(data-tooltip='Lugar donde se llevara a cabo el evento.')
+                        div.tooltip-bottom(data-tooltip='{{L10N.locationTooltip}}')
                             label
-                                | Lugar
+                                | {{L10N.location}}
                                 span *
                             input.textflied(type='text', ng-model='event.Location', required)
                             i.icon-abs.fa.fa-map-marker
                     p
-                        div.tooltip-bottom(data-tooltip='Direccion de la imagen del evento.')
+                        div.tooltip-bottom(data-tooltip='{{L10N.imageUrlTooltip}}')
                             label
-                                | URL Imagen
+                                | {{L10N.imageUrl}}
                             input.textflied(type='text', ng-model='event.ImageUrl')
                             i.icon-abs.fa.fa-image(style="color: brown")
                     .row
                         .col-md-6.col-sm-6
                             label
-                                | Fecha de Inicio
+                                | {{L10N.beginDate}}
                                 span *
                         .col-md-6.col-sm-6
                             label
-                                | Hora Inicio
+                                | {{L10N.beginTime}}
                     .row
                         .col-md-6.col-sm-6
-                            div.tooltip-bottom(data-tooltip='dia/mes/a~o | Ej. 03/10/1994')
+                            div.tooltip-bottom(data-tooltip='{{L10N.beginDateTooltip}}')
                                 input.textfliedCalendar(type='date', ng-model='event.BeginDate', required)
                         .col-md-6.col-sm-6
-                            div.tooltip-bottom(data-tooltip='Formato 24h | Ej. 23:59')
+                            div.tooltip-bottom(data-tooltip='{{L10N.beginTimeTooltip}}')
                                 input.textfliedCalendar(type='time', value = '00:00')
                     br
                     .row
                         .col-md-6.col-sm-6
                             label
-                                | Fecha de Culminacion
+                                | {{L10N.endDate}}
                         .col-md-6.col-sm-6
                             label
-                                | Hora Culminacion
+                                | {{L10N.endTime}}
                     .row
                         .col-md-6.col-sm-6
                             div.tooltip-bottom
@@ -68,25 +67,25 @@ section.sub-banner.newsection
                             div.tooltip-bottom
                                 input.textfliedCalendar(type='time', value = '00:00')
                     p
-                        div.tooltip-bottom(data-tooltip='Descripcion completa del evento.')
+                        div.tooltip-bottom(data-tooltip='{{L10N.longDescriptionTooltip}}')
                             label
-                                | Descripcion
+                                | {{L10NlongDescription}}
                                 span *
                             textarea.texttextarea(type='text', ng-model='event.LongDescription', placeholder='Descripcion del Evento', rows='8', required)
                             i.icon-abs.fa.fa-comments(style="color: orange")
                     p
                     .div(ng-show='!isProcessing')
-                        button#submitButton.btn.btn-disabled(type='submit') CREAR
+                        button#submitButton.btn.btn-disabled(type='submit') {{L10N.createButton}}
                     .div(ng-show='isProcessing')
                         .loader
-                            h1 CARGANDO
+                            h1 {{L10N.loaderMessage}}
                             span
                             span
                             span
             .col-md-6.col-sm-6
                 // Map
                 .map-container
-                    h2.title Localidad
+                    h2.title {{L10N.locationTitle}}
                     #contact-map.map
                 // Contact Info
                 .contactinfo
@@ -118,4 +117,3 @@ section.sub-banner.newsection
                         a.twitter.fa.fa-twitter(href='#')
                         a.googleplus.fa.fa-google-plus(href='#')
                         a.linkedin.fa.fa-linkedin(href='#')
-
