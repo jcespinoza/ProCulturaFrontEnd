@@ -6,7 +6,7 @@
 .container
    .jumbotron
        h1 ProCultura
-       h3 Bienvenido a ProCultura! El mejor lugar para encontrar eventos culturales cerca de tí.
+       h3 {{mainTitle | translate}}
    .row
        .col-md-6
 
@@ -28,8 +28,8 @@ section.events.newsection
                                 .eventsimg
                                     img(src='img/515x390.gif', alt='')
                                 .event-content
-                                    h3.title {{event.title}}
-                                    p {{event.description}}
+                                    h3.title {{event.title | translate}}
+                                    p {{event.description | translate}}
                                     a.btn.btn-pri(href='#', ng-show="event.isPaid") Buy tıcket
                                     a.btn.btn-disabled.disabled(href='#', ng-show="event.isSoldOut") Sold Out
                                     a.btn.btn-sec(href='#', ng-show="event.isFree") Free Entry

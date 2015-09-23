@@ -1,7 +1,8 @@
 /**
  * Created by jcespinoza on 6/21/15.
  */
-angular.module('app', ['ngRoute', 'ngResource','ngCookies']).config(function($routeProvider, $locationProvider){
+angular.module('app', ['ngRoute', 'ngResource','ngCookies','pascalprecht.translate',
+                'tmh.dynamicLocale']).config(function($routeProvider, $locationProvider){
 
     $locationProvider.html5Mode({
         enabled: true,
@@ -17,6 +18,12 @@ angular.module('app', ['ngRoute', 'ngResource','ngCookies']).config(function($ro
         .when('/event/:eventId', {templateUrl: 'partials/events/view/eventDetails', controller: 'EventDetailsController'})
         .when('/updateEvent/:eventId', {templateUrl: 'partials/events/view/updateEvent', controller: 'UpdateEventController'});
 
+}).constant('LOCALES', {
+    'locales': {
+        'es_HN': 'Español',
+        'en_US': 'English'
+    },
+    'preferredLocale': 'en_US'
 }).run(function($rootScope, $location){
     $rootScope.$on('$routeChangeError', function(event, current, previous, rejection){
         if(rejection === 'not authorized'){
@@ -27,4 +34,6 @@ angular.module('app', ['ngRoute', 'ngResource','ngCookies']).config(function($ro
     $rootScope.$on('$routeChangeStart', function(event, next, current){
         
     });
+}).config(function (tmhDynamicLocaleProvider) {
+    tmhDynamicLocaleProvider.localeLocationPattern('bower_components/angular-i18n/angular-locale_{{locale}}.js');
 });
