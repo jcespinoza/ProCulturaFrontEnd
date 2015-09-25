@@ -1,10 +1,10 @@
 // Sub Banner
 section.sub-banner.newsection
     .container
-        h2.title {{L10N.listEventTitle | translate}}
+        h2.title {{"listEventTitle" | translate}}
 .div(ng-show='allEvents')
     .spinner
-    .loadingtext {{L10N.wait | translate}}
+    .loadingtext {{"wait" | translate}}
 // Events
 section.events.newsection
     // Container
@@ -63,7 +63,7 @@ section.events.newsection
                             p(align="center", style="font-weight: bold; font-size: 13px")
                                 | {{event.ShortDescription}}
                             .div(align="center")
-                                a.btn.btn-pri(href='/') {{L10N.buyButton | translate}}
+                                a.btn.btn-pri(href='/') {{"buyButton" | translate}}
                         .links.clearfix
                             ul
                                 li

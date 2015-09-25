@@ -1,6 +1,6 @@
 section.sub-banner.newsection
     .container
-        h2.title {{L10N.loginTitle}}
+        h2.title {{"loginTitle" | translate}}
             // Modal Dialog
 .modal.fade(data-backdrop='static', data-keyboard='false', tabindex='-1', role='dialog', aria-hidden='true', style='padding-top:30%; overflow-y:visible;')
 .modal-dialog.modal-m(ng-show='isProcessing')
@@ -15,28 +15,28 @@ section.sub-banner.newsection
     .container
         .row
             .col-md-6.col-md-offset-3
-                h2.title {{L10N.signupSubtitle | translate}}
+                h2.title {{"signupSubtitle" | translate}}
                 form#contactform(name="loginForm", method='post', ng-submit='signIn()', ng-disabled='isProcessing')
                     .response
                     p
                         label(for='username')
-                            | {{L10N.username | translate}}
+                            | {{"username" | translate}}
                             span *
                         input#contactname.textflied(type='text', value='', ng-model='user.Email', name='username', placeholder='Usuario')
                         i.icon-abs.fa.fa-user
                     p
                         label(for='password')
-                            | {{L10N.password | translate}}
+                            | {{"password" | translate}}
                             span *
                         input#email.textflied(type='password', value='', ng-model='user.Password', name='password', placeholder='Password')
                         i.icon-abs.fa.fa-lock
                     p
                         span.pull-right
-                            a(href='#')  {{L10N.forgotPassword | translate}}
+                            a(href='#')  {{"forgotPassword" | translate}}
                     p
-                        button#loginButton.btn.btn-pri(type='submit', name='login', ng-disabled="loginForm.$invalid") {{L10N.loginButton | translate}}
+                        button#loginButton.btn.btn-pri(type='submit', name='login', ng-disabled="loginForm.$invalid") {{"loginButton" | translate}}
                             .login-social-link.centered(align="center")
-                        p {{L10N.socialLogin | translate}}
+                        p {{"socialLogin" | translate}}
                         button.btn.btn-google
                             i.fa.fa-google-plus-square
                             |  Google+
@@ -44,7 +44,7 @@ section.sub-banner.newsection
                             i.fa.fa-linkedin-square
                             |  LinkedIn
                     .registration(align="center")
-                        | {{L10N.noAccount}}
+                        | {{"noAccount"}}
                         br
                         a.title(href='/signup')
-                            | {{L10N.registerButton | translate}}
+                            | {{"registerButton" | translate}}

@@ -1,6 +1,6 @@
 section.sub-banner.newsection
     .container
-        h2.title {{L10N.signupTitle | translate}}
+        h2.title {{"signupTitle" | translate}}
             // Modal Dialog
 .modal.fade(data-backdrop='static', data-keyboard='false', tabindex='-1', role='dialog', aria-hidden='true', style='padding-top:30%; overflow-y:visible;')
 .modal-dialog.modal-m(ng-show='isProcessing')
@@ -15,39 +15,39 @@ section.sub-banner.newsection
     .container
         .row
             .col-md-6.col-md-offset-3
-                h2.title {{L10N.signupSubtitle | translate}}
+                h2.title {{"signupSubtitle" | translate}}
                 form#contactform(method='post', ng-submit='createUser()', name="signupForm" ng-disabled='isProcessing')
                     .response
                     p
                         label(for='name')
-                            | {{L10N.signupName | translate}}
+                            | {{"signupName" | translate}}
                             span *
                         input#contactname.textflied(type='text', ng-model='user.name', name='name', placeholder='Nombre')
                         i.icon-abs.fa.fa-user
                             p
                         label(for='username')
-                            | {{L10N.username | translate}}
+                            | {{"username" | translate}}
                             span *
                         input#contactname.textflied(type='text', ng-model='user.email', name='username', placeholder='Correo Electronico')
                         i.icon-abs.fa.fa-envelope
                             p
                         label(for='password')
-                            | {{L10N.password | translate}}
+                            | {{"password" | translate}}
                             span *
                         input#email.textflied(name='password', type='password', ng-change="confirmPassword()", ng-model="user.password", ng-pattern="'^[a-zA-Z0-9]{8,}$'", required, title="8 Alphanumeric characters minimum", placeholder='Contraseña')
                         i.icon-abs.fa.fa-lock
                             p
                         label(for='confirmPassword')
-                            | {{L10N.confirmPassword | translate}}
+                            | {{"confirmPassword" | translate}}
                             span *
                         input#email.textflied(name='confirmPassword', type='password', ng-change="confirmPassword()", ng-model="user.confirmPassword", ng-pattern="'^[a-zA-Z0-9]{8,}$'", required, title="8 Alphanumeric characters minimum", placeholder='Confirmar Contraseña')
                         i.icon-abs.fa.fa-lock
                             p(style="text-align: center; color: red", ng-show='showErrorMessage')
-                        | {{L10N.noMatchPassword | translate}}
+                        | {{"noMatchPassword" | translate}}
                         p
-                        button#signupButton.btn.btn-pri(type='submit', name='signup', title='Registrarse', ng-disabled="signupForm.$invalid") {{L10N.registerButton | translate}}
+                        button#signupButton.btn.btn-pri(type='submit', name='signup', title='Registrarse', ng-disabled="signupForm.$invalid") {{"registerButton" | translate}}
                             .registration
-                        | {{L10N.hasAccount | translate}}
+                        | {{"hasAccount" | translate}}
                         br
                         a(href='/login')
-                            | {{L10N.loginButton | translate}}
+                            | {{"loginButton" | translate}}

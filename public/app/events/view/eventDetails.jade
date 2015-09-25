@@ -1,7 +1,7 @@
 // Sub-banner
 section.sub-banner.newsection
     .container
-        h2.title {{L10N.detailEventTitle | translate}}
+        h2.title {{"detailEventTitle" | translate}}
 // Events
 section.events.text-left.newsection
     .container
@@ -24,7 +24,7 @@ section.events.text-left.newsection
                     // event-detail-img
                     .event-detail-img
                         img(src='{{event.ImageUrl}}', alt='')
-                    h3.SubjectTitle {{L10N.subjectTitle | translate}}
+                    h3.SubjectTitle {{"subjectTitle" | translate}}
                     p.LongDescription
                         | {{event.LongDescription}}
                     // Social Icon
