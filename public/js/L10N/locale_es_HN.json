@@ -66,5 +66,7 @@
     "loadMore": "cargar mas",
 
     "loaderMessage": "CARGANDO",
-    "wait": "Porfavor Espere..."
+    "wait": "Porfavor Espere...",
+
+    "languageSelection": "Seleccion Idioma"
 }

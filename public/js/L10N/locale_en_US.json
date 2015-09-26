@@ -45,7 +45,7 @@
 
     "seconds": "SECONDS",
     "minutes": "MINUTES",
-    "hour": "HOURS",
+    "hours": "HOURS",
     "days": "DAYS",
     "countdownBannerTitle": "Prepare for your next Event!",
     "countdownBannerSubtitle": "Comments here..!",
@@ -65,5 +65,7 @@
     "loadMore": "load more",
 
     "loaderMessage": "LOADING",
-    "wait": "Please Wait..."
+    "wait": "Please Wait...",
+
+    "languageSelection": "Select Language"
 }
