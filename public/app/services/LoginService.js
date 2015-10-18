@@ -6,7 +6,18 @@ angular.module('app').service('LoginService', ['$http', 'HostFactory', function(
 	var loginService = {};
 
 	loginService.login = function(user){
-		 return $http.post(HostFactory.serverName + '/api/login', user);
+		return $http({
+				method: 'POST',
+				url: HostFactory.serverName + '/Token',
+				headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+				transformRequest: function(obj) {
+			        var str = [];
+			        for(var p in obj)
+			        str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
+			        return str.join("&");
+			    },
+				data: {grant_type:'password', username: user.username, password: user.password}
+		});
 	};
 	return  loginService;
 }]);
