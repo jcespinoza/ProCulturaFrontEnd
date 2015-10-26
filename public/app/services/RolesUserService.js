@@ -6,4 +6,5 @@ angular.module('app').service('RolesUserService', ['$http', 'HostFactory', funct
     	//call BackEnd
 	}
 
+
 }]);
