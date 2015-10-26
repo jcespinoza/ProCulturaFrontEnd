@@ -3,4 +3,9 @@ angular.module('app').controller('SignUpController', ['$scope','UserService','$l
 		 $scope.isProcessing = false;
   		 $scope.showErrorMessage = false;
 
+  		 $scope.userPriviliege ={
+  		 	userName = "",
+  		 	role = ""
+  		 };
+
 	}]);
