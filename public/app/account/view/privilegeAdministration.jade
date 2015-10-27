@@ -1,0 +1,37 @@
+section.sub-banner.newsection
+    .container
+        h2.title Role Assignment
+            // Modal Dialog
+.modal.fade(data-backdrop='static', data-keyboard='false', tabindex='-1', role='dialog', aria-hidden='true', style='padding-top:30%; overflow-y:visible;')
+.modal-dialog.modal-m(ng-show='isProcessing')
+    .modal-content
+        .modal-header
+            h3(style='margin:0;')
+        .modal-body
+            .progress.progress-striped.active(style='margin-bottom:0;')
+                .progress-bar(style='width: 100%')
+// End Modal dialog
+.contact.newsection
+    .container
+        .row
+            .col-md-6.col-md-offset-3
+                h2.title Role Assignment
+                form#contactform(method='post', ng-submit='createUserPrivilige()', ng-disabled='isProcessing')
+                    .response
+                    p
+                        label
+                            | User
+                            span *
+                        input#contactname.textflied(type='text', value='', ng-model='userPriviledge.userName', name='username', placeholder='Usuario')
+                        i.icon-abs.fa.fa-user
+                    p
+                        label
+                            | Roles
+                            span *
+                        datalist(type='text', value='', ng-model='userPriviledge.role')
+    						option(value='admin')
+							option(value='mortal')
+							option(value='super')
+                        i.icon-abs.fa.fa-lock
+                    p
+                        button#loginButton.btn.btn-pri(type='submit', name='login') Assign

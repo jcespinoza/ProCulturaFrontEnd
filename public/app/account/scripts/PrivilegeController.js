@@ -17,7 +17,5 @@ angular.module('app').controller('SignUpController', ['$scope','RolesUserService
                 $scope.isProcessing = false;
                 $scope.showErrorMessage = true;
             });
-    };
-  		 }
-
+    	};
 	}]);
