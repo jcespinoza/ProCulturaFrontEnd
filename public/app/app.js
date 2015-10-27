@@ -16,6 +16,7 @@ angular.module('app', ['ngRoute', 'ngResource','ngCookies','pascalprecht.transla
         .when('/events', {templateUrl: 'partials/events/view/events', controller: 'EventController'})
         .when('/createEvent', {templateUrl: 'partials/events/view/createEvent', controller: 'EventController'})
         .when('/event/:eventId', {templateUrl: 'partials/events/view/eventDetails', controller: 'EventDetailsController'})
+        .when('/AdminPrivilege',{templateUrl: 'partials/account/view/privilegeAdministration',controller:'PrivilegeController'})
         .when('/updateEvent/:eventId', {templateUrl: 'partials/events/view/updateEvent', controller: 'UpdateEventController'});
 
 }).constant('LOCALES', {
@@ -44,7 +45,7 @@ angular.module('app', ['ngRoute', 'ngResource','ngCookies','pascalprecht.transla
 
 }).run(function($rootScope, $location){
     $rootScope.$on('$routeChangeStart', function(event, next, current){
-        
+
     });
 
 }).config(function (tmhDynamicLocaleProvider) {
